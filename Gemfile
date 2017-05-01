@@ -21,6 +21,10 @@ gem "minima", "~> 2.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
+   gem 'jekyll-theme-cayman', '~> 0.0.4'
+   gem 'jekyll-theme-slate', '~> 0.0.4'
+   gem 'jekyll-theme-hacker', '~> 0.0.4'
+   
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
