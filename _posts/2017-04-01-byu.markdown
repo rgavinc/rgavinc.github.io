@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "BACHELOR OF SCIENCE: COMPUTER SCIENCE ANIMATION EMPHASIS"
+startdate:   2015-04-01 11:33:02 -0600
+categories: education
+place: Brigham Young University
+---
+- Experience with: Web Programming, 3D Graphics, iOS and Android App Development
+- Tag Along (iOS app): Created a Social Media App in Swift
+- GPA: 3.41

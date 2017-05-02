@@ -1,2 +1,2 @@
-<h1>Gavin Robertson</h1>
-{{ site.website }} | {{ site.email }} | {{ site.phone }}
+<h1><a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+<h3><a href ="http://{{ site.website }}">{{ site.website }}</a> | <a href="mailto:{{ site.email }}">{{ site.email }}</a> | {{ site.phone }}</h3>

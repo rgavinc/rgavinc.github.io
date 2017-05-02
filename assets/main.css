@@ -8,18 +8,51 @@ html {
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 60rem;
+    margin: auto;
 }
 
 h1 {
-    color: red;
+    color: darkred;
     text-align: center;
 }
 
-ul#menu{
-    display: inline;
+h3{
+    color: darkgray;
 }
 
-ul#menu li {
-    display:inline;
+.detail-holder{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    user-select: none;
+}
+
+details{
+    border-bottom: 0.1rem solid black;
+}
+
+summary:focus{
+    outline: none;
+}
+
+summary:focus{
+    border: none;
+}
+
+#summary, .place{
+line-height: 2rem;
+margin: 0;
+}
+
+details[open] SUMMARY ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
 }
 
