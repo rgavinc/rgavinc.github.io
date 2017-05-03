@@ -1,2 +1,2 @@
-<h1><a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
-<h3><a href ="http://{{ site.website }}">{{ site.website }}</a> | <a href="mailto:{{ site.email }}">{{ site.email }}</a> | {{ site.phone }}</h3>
+<h1>{{ site.title | escape }}</h1>
+<h4 class = "txt-center">{% include icon-website.html %} | {% include icon-email.html %} | {% include icon-linkedin.html username=site.linkedin %} | {% include icon-github.html username=site.github_username %}</h4>

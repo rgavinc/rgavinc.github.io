@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Animator- The giraffe who was no good at gym"
+startdate:   2016-01-01 11:33:02 -0600
+enddate:    2016-06-01 11:33:02 -0600
+categories: relevant projects
+place: Brigham Young University
+---
+- Animated and Rigged Part of a Special Short Animation Using After Effects

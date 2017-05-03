@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Volunteer representative"
+startdate:   2012-01-01 11:33:02 -0600
+enddate:    2013-12-01 11:33:02 -0600
+categories: experience
+place: LDS Church
+---
+- Taught English as a second language to 3-10 community members weekly
+- Conducted, Taught, and Trained During Meetings of 8-16 Other Representatives

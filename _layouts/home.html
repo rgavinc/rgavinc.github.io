@@ -1,26 +1,93 @@
 ---
 layout: default
 ---
-
+{% assign date_format = site.minima.date_format | default: "%b %Y" %}
 <div class="home">
 
-    {% for post in site.posts %}
-     
-        <details>
-            
+{% include header.html %}
+
+<!--education-->
+<section style="margin-top: 5rem;">
+    <h2 class="wide-heading">Education</h2> 
+    {% assign sorted = (site.education | sort: 'startdate') | reverse %}
+
+    <div style="width: 100%;">
+    {% for post in sorted %}
+    <details>
             <summary>
                 <div class="detail-holder">
-        <h2 id="summary">
-          {{ post.title | escape }}
-        </h2>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <h2 id="summary">{{ post.date | date: date_format }}</h2>
-        </div>
-        </summary>
-        {{ post }}
-            
-      </details>
+                    <h2 class="summary">{{ post.title }}</h2>
+                    <h2 class="summary">{{ post.enddate | date: date_format }}</h2>
+                </div>
+            </summary>
+        {{ post }}      
+        </details>
+    {%endfor%}
+    </div>
+</section>
 
-    {% endfor %}
+<!--skills-->
+<section>
+    <h2 class="wide-heading">Skills and Abilities</h2>
+    {% assign sorted = (site.skills | sort: 'order') | reverse %}
 
+    <div style="width: 100%;">
+    {% for post in sorted %}
+    <details>
+            <summary>
+                    <h2 class="summary">{{ post.title }}</h2>
+            </summary>
+        {{ post }}      
+        </details>
+    {%endfor%}
+    </div>
+</section>
+
+<!--experience-->
+<section>
+    <h2 class="wide-heading">Experience</h2>
+    {% assign sorted = (site.experience | sort: 'startdate') | reverse %}
+
+    <div style="width: 100%;">
+    {% for post in sorted %}
+    <details>
+            <summary>
+                <div class="detail-holder">
+                    <h2 class="summary">{{ post.title }}</h2>
+                    {%if post.enddate%}
+                    <h2 class="summary">{{ post.startdate | date: date_format }} - {{ post.enddate | date: date_format }}</h2>
+                    {%else%}
+                    <h2 class="summary">{{ post.startdate | date: date_format }} - Present</h2>
+                    {%endif%}
+                </div>
+            </summary>
+        {{ post }}      
+        </details>
+    {%endfor%}
+    </div>
+</section>
+
+<!--projects-->
+<section>
+    <h2 class="wide-heading">Relevant Projects</h2>
+    {% assign sorted = (site.projects | sort: 'startdate') | reverse %}
+
+    <div style="width: 100%;">
+    {% for post in sorted %}
+    <details>
+            <summary>
+                <div class="detail-holder">
+                    <h2 class="summary">{{ post.title }}</h2>
+                    {%if post.enddate%}
+                    <h2 class="summary">{{ post.startdate | date: date_format }} - {{ post.enddate | date: date_format }}</h2>
+                    {%else%}
+                    <h2 class="summary">{{ post.startdate | date: date_format }} - Present</h2>
+                    {%endif%}
+                </div>
+            </summary>
+        {{ post }}      
+        </details>
+    {%endfor%}
+    </div>
+</section>
 </div>

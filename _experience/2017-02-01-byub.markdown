@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Web Developer"
+startdate:   2017-02-01 11:33:02 -0600
+enddate:
+categories: experience
+place: Brigham Young University Broadcasting
+---
+- Collaborated with a team of 20 students and staff to create and maintain a unique website
+- Coded in various languages and highly skilled in JS, CSS, and HTML

@@ -23,6 +23,13 @@ twitter_username:
 github_username:  rgavinc
 website: gavinrob.com
 phone: (209) 244-4682
+linkedin: gavinrob
+
+collections:
+  - education
+  - skills
+  - experience
+  - projects
 
 # Build settings
 markdown: kramdown

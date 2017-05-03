@@ -1,5 +1,19 @@
+/*darkred: 7A1B0E*/
+
+
+/*lightred: B70000*/
+
 * {
     box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #B70000;
 }
 
 html {
@@ -8,51 +22,141 @@ html {
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    max-width: 60rem;
+    max-width: 90rem;
     margin: auto;
+    padding: 0 2rem 0 2rem;
+
+background: linear-gradient(to bottom, rgba(173,217,228,1) 0%,rgba(217,237,242,1) 39%,rgba(255,255,255,1) 73%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background-repeat: no-repeat;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
 }
 
 h1 {
-    color: darkred;
+    color: #7A1B0E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 0;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+h3 {
+    color: darkgray;
+    text-transform: uppercase;
+}
+
+h4 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.txt-center {
     text-align: center;
 }
 
-h3{
-    color: darkgray;
-}
-
-.detail-holder{
-    cursor: pointer;
+.detail-holder {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    user-select: none;
 }
 
-details{
+details {
     border-bottom: 0.1rem solid black;
 }
 
-summary:focus{
+summary {
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+}
+
+summary:focus {
     outline: none;
 }
 
-summary:focus{
+summary:focus {
     border: none;
 }
 
-#summary, .place{
-line-height: 2rem;
-margin: 0;
+.summary, .place {
+    line-height: 2rem;
+    margin: 0;
 }
 
 details[open] SUMMARY ~ * {
-  animation: sweep .5s ease-in-out;
+    animation: sweep .5s ease-in-out;
 }
-
 
 @keyframes sweep {
-  0%    {opacity: 0; margin-left: -10px}
-  100%  {opacity: 1; margin-left: 0px}
+    0% {
+        opacity: 0;
+        margin-left: -10px
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0px
+    }
 }
 
+.wide-heading {
+    display: none;
+}
+
+.home {
+    margin-top: 2rem;
+    min-height: 90vh;
+    max-height: 1000rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-image: url("/resources/paper-tile.jpg");
+    background-repeat: repeat;
+    padding: 3rem 5rem 3rem 5rem;
+    position: relative;
+}
+
+.home:before, .home:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.home:before {
+    background-image: url("/resources/paper-tile.jpg");
+    background-repeat: repeat;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+
+.home:after {
+    background-image: url("/resources/paper-tile.jpg");
+    background-repeat: repeat;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+}
+
+@media screen and (min-width: 480px) {
+    .wide-heading {
+        width: 15rem;
+        min-width: 15rem;
+        color: #B70000;
+        display: initial;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .home {
+        padding: 3rem 9rem 3rem 9rem;
+    }
+}
