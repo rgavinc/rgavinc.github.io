@@ -3,4 +3,4 @@ layout: post
 title:  "Programming"
 order:   1
 ---
-- Web, App, Java, C++
+- <a href="http://gavinrob.com/web-development/">Web</a>, <a href="http://gavinrob.com/app/">App<a>, Java, C++
