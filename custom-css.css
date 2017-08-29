@@ -404,6 +404,9 @@ body,
   height: 14.1rem;
   position: relative;
 }
+.text-only .post-image {
+  height: 0;
+}
 .post.text-only .post-type-icon a {
   display: flex;
   justify-content: center;
