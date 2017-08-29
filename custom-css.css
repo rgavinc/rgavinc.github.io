@@ -383,7 +383,7 @@ body,
   height: 4rem;
   justify-content: center;
   left: 0;
-  position: absolute;
+  position: initial;
   right: auto;
   top: 0;
   width: 100%;
