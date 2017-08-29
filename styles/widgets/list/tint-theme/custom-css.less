@@ -1,4 +1,5 @@
-@import (reference) url("colors");
+@import (reference) url("../../../variables/colors");
+@import (reference) url("../../../mixins/fonts");
 
 /* latin */
 
@@ -168,9 +169,7 @@ html {
 }
 
 body {
-	font-family: "Nunito", sans-serif;
-	font-size: 1.3rem;
-	font-weight: 300;
+	.font-tint-default;
 	background-color: transparent;
 	display: block;
 	font-smoothing: antialiased;
@@ -193,8 +192,7 @@ body {
 }
 
 .hypeTemplate .post-title p::first-line, .hypeTemplate.text-only .post-title p::first-line, .hypeTemplate.text-only .post-title p, .post .post-title {
-	font-size: 1.8rem;
-	font-weight: 100;
+	.font-tint-primary;
 	background: #383838;
 	color: #FFFFFF;
 	font-family: "Nunito", sans-serif;
@@ -212,7 +210,7 @@ body {
 }
 
 .fontsize_secondary a, .fontsize_secondary, .hypeTemplate_horizontal a, .hypeTemplate_horizontal:hover a {
-	font-size: 1.8rem;
+	.font-tint-secondary
 }
 
 .font_secondary, .font_secondary a, .hypeTemplate .post-title:not(.text-only) p {
@@ -350,7 +348,7 @@ body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slide
 }
 
 .hypeTemplate_horizontal_rarr, .hypeTemplate_horizontal_larr {
-	font-size: 2rem;
+	.font-tint-hypetemp;
 	align-items: center;
 	background: #000000;
 	color: #9B9B9B;
@@ -449,7 +447,7 @@ body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slide
 }
 
 .hypeTemplate_horizontal.text-only .network-icon a {
-	font-size: 3rem;
+	.font-tint-textonly;
 }
 
 .hypeTemplate_horizontal .post-title-padding {
@@ -523,7 +521,7 @@ img.emojione {
 }
 
 .hypeTemplate_horizontal .post-title::after {
-	font-size: 1.8rem;
+	.font-tint-secondary;
 	bottom: 1.25em;
 	box-sizing: content-box;
 	content: "\02026";
