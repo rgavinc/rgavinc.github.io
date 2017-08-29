@@ -380,7 +380,7 @@ body,
 .hypeTemplate_horizontal.text-only .network-icon {
   align-items: center;
   display: flex;
-  height: 4rem;
+  height: 14.1rem;
   justify-content: center;
   left: 0;
   position: absolute;
@@ -403,9 +403,6 @@ body,
 .hypeTemplate_horizontal .post-image {
   height: 14.1rem;
   position: relative;
-}
-.text-only .post-image {
-  height: 0;
 }
 .post.text-only .post-type-icon a {
   display: flex;
