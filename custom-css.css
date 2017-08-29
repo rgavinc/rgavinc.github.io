@@ -466,6 +466,9 @@ img.emojione {
   text-align: center;
   width: 1em;
 }
+.hypeTemplate_horizontal.text-only .post-title::after {
+  display: none;
+}
 .hypeTemplate_horizontal .post-title > *:first-child {
   float: right;
   height: auto !important;
