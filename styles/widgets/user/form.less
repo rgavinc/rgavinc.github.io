@@ -1,0 +1,301 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/shine");
+@import (reference) url("../../keyframes/keyframes");
+@import (reference) url("../../mixins/loader");
+@import (reference) url("../../mixins/fonts");
+
+@loaderSize: 18;
+@loaderThickness: 1.5;
+@loaderSpeed: 1;
+form.account {
+	background-color: @secondary-gray-lighter;
+
+	.loading {
+		.loader(@size: @loaderSize, @thickness: @loaderThickness, @color: @primary-white, @background-color: @primary-blue, @speed: @loaderSpeed);
+		display: inline-block;
+		transition: margin-left 300ms;
+		margin-left: 1rem;
+		bottom: 1.5rem;
+		margin-bottom: -@loaderSize/10rem;
+		position: relative;
+		z-index: 100;
+	}
+	
+	fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+
+		section.main-content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 2rem 0;
+
+			> section {
+				min-width: 90vw;
+				padding: 0 2rem 2rem 2rem;
+				margin: 0;
+			}
+
+			section.info {
+				padding-bottom: 0;
+			}
+
+			.big-button {
+				min-height: 3.5rem;
+				min-width: 20rem;
+			}
+
+			.big-button + p {
+				.font-form-hint;
+				width: 20rem;
+				margin-top: 0.3em;
+				text-align: center;
+			}
+
+			ul li {
+				.font-form-list;
+				padding: .5rem 0;
+			}
+
+			h1 {
+				.font-form-subtitle;
+			}
+
+			@media (min-width: @breakpoint-sm) {
+				section.info {
+					max-width: 40rem;
+					margin-top: 2rem;
+				}
+				> section {
+					min-width: 44rem;
+				}
+			}
+
+			@media (min-width: @breakpoint-md) {
+				> section {
+					margin: 0 5rem;
+				}
+			}
+
+		}
+	}
+
+	legend {
+		.font-form-legend;
+		background: @primary-gray-dark;
+		padding: 2rem;
+		text-align: center;
+		width: 100%;
+	}
+
+	.message {
+		max-width: 40rem;
+	}
+
+	.success, .error {
+		margin-top: 2rem;
+		padding-right: 4.5rem;
+		position: relative;
+
+		h1 {
+			display: none;
+		}
+
+		&::after {
+			.font-form-icon;
+			display: block;
+			font-family: "byutv3org";
+			position: absolute;
+			right: 1.5rem;
+			top: ~"calc(50% - 1rem)";
+		}
+	}
+
+	.success {
+		background-color: @secondary-green-lighter;
+		border: 0.1rem solid @secondary-green;
+		color: @secondary-green;
+
+		&::after {
+			content: "\e91e";
+		}
+	}
+
+	.error {
+		background-color: @secondary-red-lighter;
+		border: 0.1rem solid @secondary-red;
+		color: @secondary-red;
+
+		&::after {
+			content: "\e900"; //- TODO: make this bigger
+		}
+	}
+
+	label {
+		.font-form-label;
+		display: block;
+		max-width: 40rem;
+		margin: 2rem 0 0.2rem 0;
+	}
+
+	input[type="checkbox"] + label {
+		display: inline-block;
+		margin: 2rem 0 0 2rem;
+		width: ~"calc(100% - 4.2rem)";
+	}
+
+	input {
+		.font-form-input;
+		border: none;
+		border-radius: 0.2rem;
+		box-shadow: inset 0 0 0.5rem rgba(0,0,0,0.3);
+		font-family: "Nunito", sans-serif;
+		padding: 0.8rem;
+		position: relative;
+
+		&.valid {
+			box-shadow: inset 0 0 0.5rem @secondary-green;
+		}
+
+		&.invalid {
+			box-shadow: inset 0 0 0.5rem @secondary-red;
+		}
+	}
+
+	input.valid + .is-valid::after {
+		.font-form-icon;
+		color: @secondary-green;
+		content: "\e91e";
+		display: block;
+		font-family: "byutv3org";
+		position: absolute;
+		right: 1rem;
+		top: ~"calc(50% - 1rem)";
+	}
+
+	input.invalid + .is-valid::after {
+		.font-form-icon;
+		color: @secondary-red;
+		content: "\e900";
+		display: block;
+		font-family: "byutv3org";
+		position: absolute;
+		right: 1rem;
+		top: ~"calc(50% - 1rem)";
+	}
+
+	.input {
+		max-width: 40rem;
+		position: relative;
+	}
+
+	input:not([type="checkbox"]) {
+		padding-right: 4.5rem;
+		width: 100%;
+	}
+
+	input[type="checkbox"] {
+		margin: 2.5rem 0 0 0;
+		vertical-align: top;
+	}
+
+	.input + p {
+		.font-form-hint;
+		max-width: 40rem;
+		margin: 0.5rem 0 0 0.2rem;
+	}
+
+	section label.show-password {
+		margin-top: 2.5rem;
+		margin-left: 1rem;
+	}
+
+	.required::before {
+		color: @primary-red;
+		content: "*";
+		display: inline-block;
+		margin-right: 1rem;
+		vertical-align: sub;
+	}
+
+	input[type="checkbox"].required, input[type="checkbox"].subscription {
+		position: relative;
+		left: 2rem;
+	}
+
+	input[type="checkbox"].required:before {
+		margin-right: 0;
+		position: relative;
+		right: 1.9rem;
+		vertical-align: initial;
+	}
+
+	input[type="checkbox"].required + label, input[type="checkbox"].subscription + label {
+		margin-left: 4rem;
+    	max-width: 34.8rem;
+		width: ~"calc(100% - 5.3rem)";
+	}
+
+	p.required {
+		margin-top: 2rem;
+	}
+
+	button {
+		.font-form-button;
+		background-color: @primary-blue;
+		border: none;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		display: block;
+		margin-top: 2rem;
+		overflow: hidden;
+		padding: 0.5rem 1.1rem;
+		position: relative;
+		text-transform: uppercase;
+
+		&:hover, &:focus {
+			.shine();
+		}
+	}
+
+	a {
+		color: @primary-blue;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+div.form.account.vex.vex-theme-plain {
+	div.vex-dialog-message {
+		.font-vex-text;
+	}
+
+	button.vex-dialog-button {
+		.font-vex-button;
+		background-color: @primary-blue;
+		border: none;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		display: block;
+		margin-top: 2rem;
+		overflow: hidden;
+		padding: 0.5rem 1.1rem;
+		position: relative;
+		text-transform: uppercase;
+
+		&:hover, &:focus {
+			animation: none;
+			.shine();
+		}
+	}
+	
+	button.vex-dialog-button-secondary {
+		background-color: @secondary-red;
+		color: @primary-white;
+	}
+}

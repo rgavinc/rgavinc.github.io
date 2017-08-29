@@ -1,0 +1,266 @@
+.banner {
+  overflow: hidden;
+  position: relative;
+}
+.banner .images figure img:hover,
+.banner .images figure img:focus {
+  transform: scale3d(1.05, 1.05, 1);
+}
+.banner:hover .info label::before {
+  animation: shine .75s;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 50%;
+}
+.banner:hover .info .no-link label::before {
+  animation: none;
+}
+.banner .images {
+  background-color: #000000;
+}
+.banner .images .slick-slide {
+  width: 100vw;
+}
+.banner .images figure {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.banner .images img {
+  height: auto;
+  transition: opacity 1s,transform .5s;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.banner .images .no-link img:hover,
+.banner .images:focus {
+  transform: none;
+}
+.banner .info,
+.banner .info .slick-track {
+  align-items: flex-end;
+  display: flex;
+}
+.banner .info {
+  bottom: 0;
+  padding: 0 7rem 4.5rem 7rem;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 200;
+}
+.banner .info::after {
+  background: linear-gradient(to top, #000000 3rem, transparent 15rem);
+  bottom: 0;
+  content: "";
+  height: 17rem;
+  left: -100vw;
+  pointer-events: none;
+  position: absolute;
+  width: 300vw;
+  z-index: -100;
+}
+.banner .info a,
+.banner .info .no-link {
+  color: #FFFFFF;
+  outline: none;
+  text-align: center;
+}
+.banner .info a:hover,
+.banner .info .no-link:hover,
+.banner .info a:focus,
+.banner .info .no-link:focus {
+  text-decoration: none;
+}
+.banner .info label {
+  background-color: #008DDF;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+.banner .info h1,
+.banner .info h2,
+.banner .info p {
+  font-weight: 400;
+  margin: 0;
+  text-shadow: 0 0.1rem 0.1rem #000000;
+}
+.banner .info h1,
+.banner .info h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.banner .info h1 {
+  font-size: 1.8rem;
+}
+.banner .info h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+.banner .info h2:empty {
+  display: none;
+}
+.banner .info p {
+  display: none;
+  margin-top: 0.5rem;
+  height: 0;
+}
+.banner .buttons {
+  display: none;
+}
+@media (min-width: 512px) {
+  .banner .images .slick-slide {
+    margin: 0 0.5rem;
+    width: 80vw;
+  }
+  .banner .images > div::before,
+  .banner .images > div::after {
+    background: rgba(0, 0, 0, 0.6);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 10vw;
+    z-index: 100;
+  }
+  .banner .images > div::before,
+  .banner .images > div::after,
+  .banner .buttons div {
+    width: calc(10vw - .85rem);
+  }
+  .banner .images > div::after {
+    left: auto;
+    right: 0;
+  }
+  .banner .info {
+    left: 10vw;
+    padding: 0 0 2rem 0;
+    width: calc(80vw + 0.1rem - .85rem);
+  }
+  .banner .info h1 {
+    font-size: 2rem;
+  }
+  .banner .buttons {
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+  }
+  .banner .buttons div {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 1 auto;
+    outline: none;
+    pointer-events: none;
+    position: relative;
+    width: 10vw;
+  }
+  .banner .buttons div::before {
+    font-size: 5rem;
+    opacity: 0.6;
+  }
+  .banner .buttons div:hover::before {
+    opacity: 1;
+  }
+  .banner .buttons .slick-prev::before {
+    pointer-events: auto;
+    position: absolute;
+    right: 1rem;
+    top: calc(50% - 3rem);
+  }
+  .banner .buttons .slick-next::before {
+    left: 1rem;
+    pointer-events: auto;
+    position: absolute;
+    top: calc(50% - 3rem);
+  }
+}
+@media (min-width: 768px) {
+  .banner .images .slick-slide {
+    width: calc(76.8rem - 20vw);
+  }
+  .banner .images > div::before,
+  .banner .images > div::after,
+  .banner .buttons div {
+    width: calc((100vw - (76.8rem - 20vw)) / 2 - .85rem);
+  }
+  .banner .info {
+    left: calc(50% - ((76.8rem - 20vw) / 2));
+    width: calc(76.8rem - 20vw + 0.1rem);
+  }
+  .banner .info h1,
+  .banner .info h2,
+  .banner .info p {
+    white-space: normal;
+  }
+  .banner .info h1 {
+    font-size: 2.5rem;
+  }
+  .banner .info p {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .banner .images .slick-slide {
+    width: calc(102.4rem - 20vw);
+  }
+  .banner .images > div::before,
+  .banner .images > div::after,
+  .banner .buttons div {
+    width: calc((100vw - (102.4rem - 20vw)) / 2 - .85rem);
+  }
+  .banner .buttons div::before {
+    font-size: 6rem;
+  }
+  .banner .info {
+    left: calc(50% - ((102.4rem - 20vw) / 2));
+    width: calc(102.4rem - 20vw + 0.1rem);
+  }
+  .banner .info h1 {
+    font-size: 3rem;
+  }
+  .banner .info h2 {
+    font-size: 2rem;
+  }
+  .banner .info p {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1280px) {
+  .banner .images .slick-slide {
+    width: 102.4rem;
+  }
+  .banner .images > div::before,
+  .banner .images > div::after,
+  .banner .buttons div {
+    width: calc((100vw - 102.4rem) / 2 - .85rem);
+  }
+  .banner .info {
+    left: calc(50% - (102.4rem / 2));
+    width: calc(102.4rem + 0.1rem);
+  }
+}

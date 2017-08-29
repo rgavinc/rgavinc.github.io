@@ -1,0 +1,74 @@
+@import (reference) url("../variables/colors");
+
+// https://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/
+// Use `em` instead of `rem` to get the correct spacing.
+.multiLine-ellipsis(@line-count: 3, @line-height: 2.2rem, @background-color: @primary-black) {
+  hyphens: auto;
+  line-height: @line-height;
+  max-height: @line-height * @line-count; 
+  overflow: hidden;
+  padding-right: 1em;
+  position: relative;
+
+  &::before, &::after {
+    line-height: @line-height;
+  }
+
+  &::before {
+    bottom: 0;
+    content: "\02026";
+    position: absolute;
+    right: 0.5rem;
+  }
+
+  // Hides the ellipsis when actual lines <= @line-count
+  &::after {
+    background: @background-color;
+    content: "";
+    height: 1em;
+    margin-top: 0.3em;
+    position: absolute;
+    right: 0;
+    width: 1em;
+  }
+}
+
+// http://dev.mobify.com/blog/multiline-ellipsis-in-pure-css/
+// Another way I found to do multi-line ellipsis.  Requires a wrapper element.
+.multiLine-ellipsis-with-wrapper(@line-count: 3, @line-height: 2.2rem, @font-size: 1.3rem, @background-color: @primary-black) {
+  @height: unit(@line-count * @line-height * @font-size, rem);
+
+  overflow: hidden;
+  height: @height;
+  hyphens: auto;
+  line-height: @line-height;
+
+  &::before {
+    content: "";
+    float: left;
+    height: @height;
+    width: 0.5rem;
+  }
+
+  &::after {
+    bottom: @line-height;
+    box-sizing: content-box;
+    content: "\02026";  
+    float: right;
+    font-size: @font-size;
+    left: 100%;
+    line-height: @line-height;
+    margin-left: -1em;
+    padding-right: 0.5rem;
+    position: relative;
+    text-align: center;
+    width: 1em;
+  }
+
+  & > *:first-child {
+    float: right;
+    margin-left: -0.5rem;
+    margin-right: 1em;
+    width: ~"calc(100% - 1em)";
+  }
+}

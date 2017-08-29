@@ -1,0 +1,125 @@
+.list.post .slick-track {
+  display: flex;
+}
+.list.post .slick-track > div {
+  display: flex;
+  flex-direction: column;
+  float: none;
+  height: auto;
+}
+.list.post .slick-track > div > div {
+  display: flex;
+  flex: 1 1 auto;
+}
+.list.post .slick-track > div > div:empty {
+  display: none;
+}
+.list.post a {
+  display: flex !important;
+  flex-direction: column;
+  float: none;
+  height: auto;
+}
+.list.post figure {
+  margin-bottom: -0.1rem;
+}
+.list.post .titles {
+  background: #383838;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  text-shadow: none;
+}
+.list.post .titles > section {
+  line-height: 1.25em;
+  padding-top: 1rem;
+}
+.list.post .titles::after {
+  display: none;
+}
+.list.post h2 {
+  hyphens: auto;
+  max-height: 3.75em;
+  overflow: hidden;
+  padding-right: 1em;
+  position: relative;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 1.25em;
+  white-space: normal;
+}
+.list.post h2::before,
+.list.post h2::after {
+  line-height: 1.25em;
+}
+.list.post h2::before {
+  bottom: 0;
+  content: "\02026";
+  position: absolute;
+  right: 0.5rem;
+}
+.list.post h2::after {
+  background: #383838;
+  content: "";
+  height: 1em;
+  margin-top: 0.3em;
+  position: absolute;
+  right: 0;
+  width: 1em;
+}
+.list.post h4,
+.list.post time {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  font-weight: 100;
+  display: inline-block;
+  font-style: italic;
+}
+.list.post h4::after {
+  content: "·";
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media (min-width: 512px) {
+  .list.post.hero .slick-slide {
+    flex: 0 1 auto;
+  }
+  .list.post.hero .slick-slide h2 {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 100;
+  }
+  .list.post.hero .slick-slide:first-child {
+    height: 25.6rem;
+    width: 28.2rem;
+  }
+  .list.post.hero .slick-slide:not(:first-child) {
+    width: 38.5rem;
+  }
+  .list.post.hero .slick-slide:not(:first-child) > div {
+    display: block;
+    height: auto;
+    width: auto;
+  }
+  .list.post.hero .slick-slide:not(:first-child) > div + div {
+    margin-top: 1rem;
+  }
+  .list.post.hero .slick-slide:not(:first-child) a {
+    flex-direction: row;
+  }
+  .list.post.hero .slick-slide:not(:first-child) a figure {
+    margin-right: 0;
+    width: 58.1rem;
+  }
+  .list.post.hero .slick-slide:not(:first-child) a img {
+    width: 100%;
+  }
+  .list.post.hero .slick-slide:not(:first-child) a .titles {
+    height: auto;
+    margin-left: 0;
+  }
+}

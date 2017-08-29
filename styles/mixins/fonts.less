@@ -1,0 +1,365 @@
+@import (reference) url("../variables/colors");
+@import (reference) url("../variables/breakpoints");
+
+//reset.less
+.default {
+	font-family: "Nunito", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+//nnl.less/list.less
+.font-item-title {
+	color: @primary-white;
+	font-size: 1.8rem;
+}
+
+.font-item-subtitle {
+	color: @primary-gray-light;
+}
+
+//list.less
+.font-list-label {
+	color: @primary-white;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.font-slick-smallicon {
+	color: @primary-gray-light;
+	font-size: 2rem;
+}
+
+.font-hero-title {
+	font-size: 3.3rem;
+	font-weight: 100;
+}
+
+.font-hero-subtitle {
+	font-size: 2rem;
+	font-weight: 100;
+}
+
+//list-group.less
+.font-list-title {
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+
+.font-list-viewall {
+	font-size: 1.3rem;
+}
+
+.font-list-nocontent {
+	font-size: 2rem;
+	color: @primary-gray-light;	
+}
+
+.font-list-icon {
+	font-size: 2rem;
+}
+
+//dropdown.less
+.font-dropdown-icon {
+	font-size: 1.3rem;
+}
+
+.font-dropdown-text {
+	color: @primary-white;
+	font-size: 2rem;
+}
+
+//post.less
+.font-item-inner-description {
+	color: @primary-white;
+	font-size: 1.8rem;
+	font-weight: 100;
+}
+
+.font-item-inner-time {
+	color: @primary-white;
+	font-size: 1.3rem;
+	font-weight: 100;
+}
+
+//banner.less/branding.less/content-banner.less
+.font-banner-description {
+	color: @primary-white;
+	font-size: 2rem;
+	font-weight: 100;
+}
+
+//banner.less
+.font-banner-title {
+	color: @primary-white;
+	font-size: 1.8rem;
+
+	@media (min-width: @breakpoint-sm) {
+		font-size: 2rem;
+	}
+
+	@media (min-width: @breakpoint-md) {
+		font-size: 2.5rem;
+	}
+
+	@media (min-width: @breakpoint-lg) {
+		font-size: 3rem;
+	}
+}
+
+.font-banner-subtitle {
+	color: @primary-white;
+
+	@media (min-width: @breakpoint-lg) {
+		font-size: 2rem;
+	}
+}
+
+.font-banner-label {
+	color: @primary-white;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+.font-slick-largeicon {
+	color: @primary-gray-light;
+	font-size: 5rem;
+
+	@media (min-width: @breakpoint-lg) {
+		font-size: 6rem;
+	}
+}
+
+//branding.less
+.font-branding-title {
+	color: @primary-white;
+	font-size: 2.5rem;
+
+	@media (min-width: @breakpoint-lg) {
+		font-size: 3rem;
+	}
+}
+
+.font-branding-subtitle {
+	color: @primary-white;
+	font-size: 2rem;
+	font-weight: 200;
+
+	@media (min-width: @breakpoint-lg) {
+		font-size: 2rem;
+	}
+}
+
+.font-branding-icon {
+	color: @primary-white;
+	font-size: 1.8rem;
+}
+
+.font-icon-separator {
+	color: @primary-white;
+	font-size: 2rem;
+}
+
+// header.less
+.font-menu {
+	color: @primary-white;
+	font-size: 1.6rem;
+	font-weight: 700;
+
+	@media (min-width: @breakpoint-md) {
+		font-size: 1.8rem;
+	}
+}
+
+.font-menu-button {
+	color: @primary-white;
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+.font-menu-smallicon {
+	font-size: 1.2rem;
+	color: @primary-white;
+}
+
+.font-menu-input {
+	color: @primary-white;
+	font-size: 1.6rem;
+}
+
+// footer.less
+.font-footer {
+	color: @primary-gray-light;
+}
+
+// document-page.less
+.font-document-title {
+	color: @primary-white;
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+.font-document-link {
+	color: @secondary-gray-dark;
+	font-size: 1.6rem;
+}
+
+// player-banner.less
+.font-player-signin {
+	font-size: 3rem;
+}
+
+.font-player-icon {
+	font-size: 2rem;
+}
+
+// schedule.less
+.font-schedule-day {
+	color: @secondary-gray-dark;
+	font-size: 1.8rem;
+}
+
+.font-schedule-icon {
+	color: @primary-white;
+	font-weight: 300;
+	font-size: 1.8rem;
+}
+
+.font-schedule-time {
+	color: @primary-white;
+	font-weight: 300;
+	font-size: 1.8rem;
+}
+
+.font-schedule-label {
+	color: @primary-white;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.font-schedule-title {
+	color: @primary-white;
+	font-size: 2.2rem;
+	font-weight: 300;
+}
+
+.font-schedule-subtitle {
+	color: @primary-gray-light;
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+.font-schedule-description {
+	color: @primary-gray-light;
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+.font-schedule-firstline {
+	font-size: 2.2rem;
+}
+
+//form.less
+.font-form-hint {
+	font-size: 1.3rem;
+}
+
+.font-form-list {
+	font-size: 1.7rem;
+}
+
+.font-form-subtitle {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.font-form-legend {
+	color: @primary-white;
+	font-size: 2rem;
+    font-weight: 500;
+}
+
+.font-form-icon {
+	font-size: 1.6rem;
+}
+
+.font-form-label {
+	font-size: 1.5rem;
+}
+
+.font-form-input {
+	font-size: 1.5rem;
+}
+
+.font-form-button {
+	color: @primary-white;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.font-vex-text {
+	color: @primary-black;
+	font-family: "Nunito", sans-serif;
+	font-size: 1.5rem;
+}
+
+.font-vex-button {
+	color: @primary-white;
+	font-family: "Nunito", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+//gallery.less
+.font-gallery-arrow {
+	color: @primary-white;
+	font-size: 2rem;
+	
+	@media (min-width: @breakpoint-sm) {
+		font-size: 3rem;
+	}
+}
+
+.font-gallery-xicon {
+	color: @primary-white;
+	font-size: 2rem;
+}
+
+.font-gallery-title {
+	color: @primary-gray-light;
+	font-family: "Nunito";
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+.font-gallery-description {
+	color: @primary-gray-light;
+	font-family: "Nunito";
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+//custom-css.less
+.font-tint-default {
+	font-family: "Nunito", sans-serif;
+	font-size: 1.3rem;
+	font-weight: 300;
+}
+
+.font-tint-primary {
+	font-size: 1.8rem;
+	font-weight: 100;
+}
+
+.font-tint-secondary {
+	font-size: 1.8rem;
+}
+
+.font-tint-hypetemp {
+	font-size: 2rem;
+}
+
+.font-tint-textonly {
+	font-size: 8rem;
+}
+

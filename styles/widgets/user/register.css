@@ -1,0 +1,20 @@
+a#terms,
+a#privacy {
+  margin-top: 1rem;
+}
+a#terms {
+  margin-left: 5.3rem;
+}
+a#privacy {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+a#privacy::before {
+  color: initial;
+  content: "|";
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+}

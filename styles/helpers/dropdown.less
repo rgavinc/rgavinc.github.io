@@ -1,0 +1,116 @@
+@import (reference) url("../variables/colors");
+@import (reference) url("../mixins/social-icons");
+@import (reference) url("../mixins/fonts");
+
+section.drop-target {
+	align-items: flex-start;
+	cursor: pointer;
+	position: relative;
+
+	span.icon-down-arrow-fill {
+		.font-dropdown-icon;
+		bottom: -0.8rem;
+		left: 0;
+		padding: 1rem;
+		position: absolute;
+		z-index: 100;
+		height: 4rem;
+
+		& + [class^="icon"] {
+			margin-left: 4.5rem;
+		}
+	}
+
+	[class^="icon"], div.youtube {
+		margin-right: 1rem;
+	}
+
+	&:hover {
+		color: @primary-white;
+	}
+
+	&.drop-enabled {
+		color: @primary-white;
+
+		span.icon-down-arrow-fill {
+			background-color: @primary-black-lighter;
+			color: @primary-white;
+		}
+	}
+}
+
+div.drop-element.drop-theme-basic {
+	top: -0.1rem !important;
+	z-index: 200;
+
+	div.drop-content {
+		box-shadow: none;
+		padding: 0;
+
+		nav {
+			background-color: @primary-black-lighter;
+			overflow: hidden;
+			padding: 1rem;
+
+			a {
+				.font-dropdown-text;
+				clear: both;
+				display: block;
+				float: left;
+				margin: 0.5rem 0;
+				padding: 0.5rem;
+				position: relative;
+				width: 100%;
+
+				&::before {
+					border-top: 0.1rem solid transparent;
+					content: "";
+					left: 0;
+					position: absolute;
+					top: -0.5rem;
+					width: 100%;
+				}
+
+				&.first-in-group:not(:first-child) {
+					&::before {
+						border-top-color: @primary-gray-dark;
+					}
+				}
+
+				&.active {
+					background: @secondary-gray-dark;
+					pointer-events: none;
+				}
+
+				&:hover:not(.active), &:focus:not(.active) {
+					background: @primary-gray-dark;
+				}
+
+				[class^="icon-"], div.youtube {
+					display: inline-block;
+					margin-right: 1rem;
+				}
+
+				div.youtube {
+					position: relative;
+					top: 0.2rem;
+				}
+
+				.social-icons(@base-size: 1.5rem);
+			}
+		}
+	}
+}
+
+.grid-layout .list-group header div.drop-target {
+	align-items: center;
+
+	&.drop-enabled, &:hover, &:focus {
+		color: @primary-gray-lighter;
+		cursor: pointer;
+	}
+	
+	span.icon-down-arrow-fill {
+		padding: 1rem;
+	}
+}

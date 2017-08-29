@@ -1,0 +1,328 @@
+section.drop-target {
+  align-items: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+section.drop-target span.icon-down-arrow-fill {
+  bottom: -0.8rem;
+  font-size: 1.3rem;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+  z-index: 100;
+  height: 4rem;
+}
+section.drop-target span.icon-down-arrow-fill + [class^="icon"] {
+  margin-left: 4.5rem;
+}
+section.drop-target [class^="icon"],
+section.drop-target div.youtube {
+  margin-right: 1rem;
+}
+section.drop-target:hover {
+  color: #FFFFFF;
+}
+section.drop-target.drop-enabled {
+  color: #FFFFFF;
+}
+section.drop-target.drop-enabled span.icon-down-arrow-fill {
+  background-color: #383838;
+  color: #FFFFFF;
+}
+div.drop-element.drop-theme-basic {
+  top: -0.1rem !important;
+  z-index: 200;
+}
+div.drop-element.drop-theme-basic div.drop-content {
+  box-shadow: none;
+  padding: 0;
+}
+div.drop-element.drop-theme-basic div.drop-content nav {
+  background-color: #383838;
+  overflow: hidden;
+  padding: 1rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a {
+  clear: both;
+  color: #FFFFFF;
+  display: block;
+  float: left;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  position: relative;
+  width: 100%;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a::before {
+  border-top: 0.1rem solid transparent;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: -0.5rem;
+  width: 100%;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a.first-in-group:not(:first-child)::before {
+  border-top-color: #4A4A4A;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a.active {
+  background: #646464;
+  pointer-events: none;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a:hover:not(.active),
+div.drop-element.drop-theme-basic div.drop-content nav a:focus:not(.active) {
+  background: #4A4A4A;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a [class^="icon-"],
+div.drop-element.drop-theme-basic div.drop-content nav a div.youtube {
+  display: inline-block;
+  margin-right: 1rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a div.youtube {
+  position: relative;
+  top: 0.2rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .facebook,
+div.drop-element.drop-theme-basic div.drop-content nav a .tumblr,
+div.drop-element.drop-theme-basic div.drop-content nav a .twitter,
+div.drop-element.drop-theme-basic div.drop-content nav a .youtube,
+div.drop-element.drop-theme-basic div.drop-content nav a .googleplus,
+div.drop-element.drop-theme-basic div.drop-content nav a .pinterest,
+div.drop-element.drop-theme-basic div.drop-content nav a .instagram,
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .facebook {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .facebook .facebook-logo {
+  enable-background: new 0 0 266.8930969 266.8945923;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .facebook .f-character {
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .facebook .background {
+  fill: #3C5A99;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .instagram {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .instagram .instagram-logo {
+  enable-background: new 0 0 512 512;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .instagram .instagram-logo .st0 {
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .tumblr {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .tumblr .tumblr-logo {
+  enable-background: new 0 0 256 256;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .tumblr .t-character {
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .tumblr .background {
+  fill: #35465C;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .twitter {
+  height: 1.5rem;
+  width: 1.84304933rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .twitter .twitter-logo {
+  enable-background: new 0 0 273.3895874 222.1782074;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .twitter .twitter-logo .bird {
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .youtube {
+  height: 1.5rem;
+  width: 2.13037448rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .youtube .youtube-logo {
+  enable-background: new 0 0 1024 721;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .youtube .play-icon {
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .youtube .play-icon-glare {
+  opacity: 0.12;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #420000;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .youtube #bubble-gradient stop:nth-child(1) {
+  stop-color: #E52D27;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .youtube #bubble-gradient stop:nth-child(2) {
+  stop-color: #BF171D;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .googleplus {
+  height: 1.5rem;
+  width: 1.53409091rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .googleplus .googleplus-logo {
+  enable-background: new 0 0 134.658 131.646;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .googleplus .g-character,
+div.drop-element.drop-theme-basic div.drop-content nav a .googleplus .plus-character {
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .googleplus .background {
+  fill: #DD4B39;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .pinterest {
+  height: 1.5rem;
+  width: 1.4893617rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .pinterest .pinterest-logo {
+  enable-background: new 0 0 279.332489 281.3330078;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .pinterest .p-character {
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .pinterest .background {
+  fill: #BD081C;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv .byutv-logo {
+  enable-background: new 0 0 106.5942078 74;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv .byu-text-background {
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv .oval-one {
+  opacity: 0.78;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv .oval-two {
+  opacity: 0.6909;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv .oval-three {
+  opacity: 0.11;
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv .oval-four {
+  opacity: 0.12;
+  fill: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #circle-byu-text-gradient stop:nth-child(1) {
+  stop-color: #29B0E6;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #circle-byu-text-gradient stop:nth-child(2) {
+  stop-color: #29B0E6;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #circle-byu-text-gradient stop:nth-child(3) {
+  stop-color: #2C82AE;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #circle-byu-text-gradient stop:nth-child(4) {
+  stop-color: #25577E;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #circle-byu-text-gradient stop:nth-child(5) {
+  stop-color: #14244B;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #circle-byu-text-gradient stop:nth-child(6) {
+  stop-color: #101540;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #tv-text-gradient stop:nth-child(1) {
+  stop-color: #29B0E6;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #tv-text-gradient stop:nth-child(2) {
+  stop-color: #2CA2D2;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #tv-text-gradient stop:nth-child(3) {
+  stop-color: #2D83AF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #tv-text-gradient stop:nth-child(4) {
+  stop-color: #26587F;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #tv-text-gradient stop:nth-child(5) {
+  stop-color: #15254C;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #tv-text-gradient stop:nth-child(6) {
+  stop-color: #101540;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #moon-gradient stop,
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #oval-one-gradient stop,
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #oval-two-gradient stop {
+  stop-color: #FFFFFF;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #moon-gradient stop:nth-child(1) {
+  stop-opacity: 0.3;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #moon-gradient stop:nth-child(2) {
+  stop-opacity: 0.05;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #moon-gradient stop:nth-child(3) {
+  stop-opacity: 0;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #oval-one-gradient stop:nth-child(1) {
+  stop-opacity: 0.55;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #oval-one-gradient stop:nth-child(2) {
+  stop-opacity: 0.25;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #oval-one-gradient stop:nth-child(3) {
+  stop-opacity: 0.15;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #oval-one-gradient stop:nth-child(4) {
+  stop-opacity: 0;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #oval-two-gradient stop:nth-child(1) {
+  stop-opacity: 0.5;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a .byutv #oval-two-gradient stop:nth-child(2) {
+  stop-opacity: 0;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a a {
+  margin-top: 1rem;
+  transition: transform 300ms ease-in-out;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a a:not(:last-child) {
+  margin-right: 1.8rem;
+}
+div.drop-element.drop-theme-basic div.drop-content nav a a:focus,
+div.drop-element.drop-theme-basic div.drop-content nav a a:hover {
+  transform: scale(1.15) translateZ(0) rotate(0.0001deg);
+}
+.grid-layout .list-group header div.drop-target {
+  align-items: center;
+}
+.grid-layout .list-group header div.drop-target.drop-enabled,
+.grid-layout .list-group header div.drop-target:hover,
+.grid-layout .list-group header div.drop-target:focus {
+  color: #D8D8D8;
+  cursor: pointer;
+}
+.grid-layout .list-group header div.drop-target span.icon-down-arrow-fill {
+  padding: 1rem;
+}

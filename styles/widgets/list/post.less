@@ -1,0 +1,129 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/multiline-ellipsis");
+@import (reference) url("../../mixins/fonts");
+
+.list.post {
+	.slick-track {
+		display: flex;
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			float: none;
+			height: auto;
+
+			> div {
+				display: flex; 
+				flex: 1 1 auto;
+
+				&:empty {
+					display: none;
+				}
+			}
+		}
+	}
+
+	a {
+		display: flex !important;
+		flex-direction: column;
+		float: none;
+		height: auto;
+	}
+
+	figure {
+		margin-bottom: -0.1rem; // Resolves an issue where a line is seen on hover.
+	}
+
+	.titles {
+		background: @primary-black-lighter;
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1rem;
+		position: relative;
+		text-shadow: none;
+
+		> section {
+			line-height: 1.25em;
+			padding-top: 1rem;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	h2 { 
+		.multiLine-ellipsis(3, 1.25em, @primary-black-lighter);
+
+		.font-item-inner-description;
+		line-height: 1.25em;
+		white-space: normal;
+	}
+
+	h4, time {
+		.font-item-inner-time;
+		display: inline-block;
+		font-style: italic;
+	}
+
+	h4::after {
+		content: "·";
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+}
+
+
+@media (min-width: @breakpoint-sm) {
+	.list.post {
+		&.hero {
+			.slick-slide {
+				flex: 0 1 auto;
+
+				h2 {
+					.font-item-inner-description;
+				}
+
+				&:first-child {
+					height: 25.6rem;
+					width: 28.2rem;
+				}
+
+				&:not(:first-child) {
+					width: 38.5rem;
+
+					> div {
+						display: block;
+						height: auto;
+						width: auto;
+
+						+ div {
+							margin-top: 1rem;
+						}
+					}
+
+					a {
+						flex-direction: row;
+
+							figure {
+								margin-right: 0;
+								width: 58.1rem;	
+							}
+
+						img {
+							width: 100%;
+						}
+
+						.titles {
+							height: auto;
+							margin-left: 0;
+						}
+					}	
+				}
+			}
+		}
+	}	
+}

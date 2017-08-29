@@ -1,0 +1,96 @@
+.player-banner {
+  background: #000000;
+  width: 100%;
+  z-index: 200;
+}
+.player-banner .branding-bar h1,
+.player-banner .branding-bar h2 {
+  position: static;
+}
+.player-banner .branding-bar h1 {
+  padding-top: 2rem;
+}
+.player-banner .branding-bar p {
+  margin-top: 1rem;
+}
+.player-banner .innerWrapper.oo-player {
+  width: auto !important;
+}
+.player-banner .oo-player-container .login-required {
+  font-size: 3rem;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-banner .oo-player-container .oo-state-screen-selectable:hover {
+  cursor: pointer;
+}
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon {
+  left: calc(50.75%);
+  top: 50%;
+}
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon:hover span.oo-icon::before {
+  z-index: -100;
+  background: rgba(0, 0, 0, 0.7);
+}
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon span.oo-icon,
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon .oo-player-container .oo-spinner-screen .oo-action-icon span.oo-icon {
+  font-size: 2rem;
+}
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon span.oo-icon::before,
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon .oo-player-container .oo-spinner-screen .oo-action-icon span.oo-icon::before {
+  border: 0.2rem solid #FFFFFF;
+  border-radius: 100%;
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+  display: block;
+  height: 5rem;
+  left: calc(50% - 2.8rem);
+  position: absolute;
+  top: calc(50% - 2.8rem);
+  width: 5rem;
+  box-sizing: content-box;
+}
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon:hover span.oo-icon,
+.player-banner .oo-player-container .oo-spinner-screen .oo-action-icon:hover span.oo-icon,
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon:focus span.oo-icon,
+.player-banner .oo-player-container .oo-spinner-screen .oo-action-icon:focus span.oo-icon,
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon:active span.oo-icon,
+.player-banner .oo-player-container .oo-spinner-screen .oo-action-icon:active span.oo-icon {
+  opacity: 1 !important;
+}
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon:hover span.oo-icon::before,
+.player-banner .oo-player-container .oo-spinner-screen .oo-action-icon:hover span.oo-icon::before,
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon:focus span.oo-icon::before,
+.player-banner .oo-player-container .oo-spinner-screen .oo-action-icon:focus span.oo-icon::before,
+.player-banner .oo-player-container .oo-state-screen .oo-action-icon:active span.oo-icon::before,
+.player-banner .oo-player-container .oo-spinner-screen .oo-action-icon:active span.oo-icon::before {
+  opacity: 1;
+}
+.player-banner .oo-player-container .oo-start-screen .oo-start-screen-linear-gradient {
+  background: linear-gradient(to top, #000000 3rem, transparent 15rem);
+}
+@media (min-width: 768px) {
+  .player-banner {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .player-banner .oo-player-container {
+    order: 1;
+    width: 100%;
+  }
+  .player-banner .branding-bar {
+    background: #000000;
+    position: relative;
+  }
+}
+@media (min-width: 1280px) {
+  .player-banner {
+    justify-content: center;
+  }
+  .player-banner .oo-player-container {
+    width: 128rem;
+  }
+}

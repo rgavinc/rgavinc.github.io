@@ -1,0 +1,105 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/multiline-ellipsis");
+@import (reference) url("../../mixins/fonts");
+
+.list-layout {
+	.content-banner{
+		.branding-bar {
+			margin-top: -8rem;
+		}
+	}
+}
+
+.content-banner {
+	background-color: @primary-black;
+	overflow: hidden;
+	position: relative;
+	
+
+	.branding-bar {
+		background: transparent;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+
+		p {
+			.font-banner-description;
+			margin: 0 auto;
+    		margin-top: 1rem;
+			max-width: 60rem;
+		}
+
+		h1 {
+			padding-top: 2rem;
+		}
+
+		.wrapper-icons {
+			justify-content: center;
+		}
+	}
+
+	.img-gradient {
+		background: linear-gradient(to top, @primary-black 3rem, transparent 15rem);
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.images {
+		figure {
+			margin: 0;
+			overflow: hidden;
+			position: relative;
+		}
+
+		img {
+			margin: 0 auto;
+		}
+
+		&::after {
+			bottom: 0;
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+	}
+}
+
+.background-banner {
+	picture {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: @breakpoint-md) {
+	.img-gradient {
+		width: 100%;
+	}
+
+	.images {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: @breakpoint-xl) {
+	.img-gradient {
+		width: 128rem;
+	}
+
+	.images {
+		img {
+			width: 128rem;
+		}
+	}
+}

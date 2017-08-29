@@ -1,0 +1,428 @@
+.list-group {
+  background-color: #000000;
+  padding-top: 4rem;
+  position: relative;
+}
+.list-group.hidden {
+  height: 0;
+  text-indent: -9999vw;
+  padding-top: 0;
+}
+.list-group:last-child {
+  padding-bottom: 4rem;
+}
+.list-group.loading .loader {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1.5em #FFFFFF;
+  font-size: 1px;
+  height: 20em;
+  position: relative;
+  width: 20em;
+}
+.list-group.loading .loader::before,
+.list-group.loading .loader::after {
+  background: #000000;
+  content: "";
+  height: 22em;
+  position: absolute;
+  width: 12em;
+}
+.list-group.loading .loader::before {
+  animation: rotate 1s infinite ease 0.75s;
+  border-radius: 22em 0 0 22em;
+  left: -1em;
+  top: -1em;
+  transform-origin: 11em 11em;
+}
+.list-group.loading .loader::after {
+  animation: rotate 1s infinite ease;
+  border-radius: 0 22em 22em 0;
+  left: 11em;
+  top: -1em;
+  transform-origin: 0 11em;
+}
+.list-group header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3.2rem 0.8rem 3.2rem;
+}
+.list-group header div {
+  user-select: none;
+}
+.list-group header .actions {
+  color: #9B9B9B;
+  display: flex;
+}
+.list-group header .actions div,
+.list-group header .actions a {
+  color: #9B9B9B;
+  cursor: pointer;
+}
+.list-group header .actions div:hover,
+.list-group header .actions a:hover,
+.list-group header .actions div:focus,
+.list-group header .actions a:focus {
+  color: #FFFFFF;
+}
+.list-group header .actions .clear {
+  margin-right: 2rem;
+}
+.list-group header .actions .spacer {
+  margin: 0 1rem;
+}
+.list-group header > section {
+  color: #9B9B9B;
+}
+.list-group header > section .facebook,
+.list-group header > section .tumblr,
+.list-group header > section .twitter,
+.list-group header > section .youtube,
+.list-group header > section .googleplus,
+.list-group header > section .pinterest,
+.list-group header > section .instagram,
+.list-group header > section .byutv {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.list-group header > section .facebook {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.list-group header > section .facebook .facebook-logo {
+  enable-background: new 0 0 266.8930969 266.8945923;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.list-group header > section .facebook .f-character {
+  fill: #FFFFFF;
+}
+.list-group header > section .facebook .background {
+  fill: #3C5A99;
+}
+.list-group header > section .instagram {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.list-group header > section .instagram .instagram-logo {
+  enable-background: new 0 0 512 512;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.list-group header > section .instagram .instagram-logo .st0 {
+  fill: #FFFFFF;
+}
+.list-group header > section .tumblr {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.list-group header > section .tumblr .tumblr-logo {
+  enable-background: new 0 0 256 256;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.list-group header > section .tumblr .t-character {
+  fill: #FFFFFF;
+}
+.list-group header > section .tumblr .background {
+  fill: #35465C;
+}
+.list-group header > section .twitter {
+  height: 1.8rem;
+  width: 2.21165919rem;
+}
+.list-group header > section .twitter .twitter-logo {
+  enable-background: new 0 0 273.3895874 222.1782074;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.list-group header > section .twitter .twitter-logo .bird {
+  fill: #FFFFFF;
+}
+.list-group header > section .youtube {
+  height: 1.8rem;
+  width: 2.55644938rem;
+}
+.list-group header > section .youtube .youtube-logo {
+  enable-background: new 0 0 1024 721;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.list-group header > section .youtube .play-icon {
+  fill: #FFFFFF;
+}
+.list-group header > section .youtube .play-icon-glare {
+  opacity: 0.12;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #420000;
+}
+.list-group header > section .youtube #bubble-gradient stop:nth-child(1) {
+  stop-color: #E52D27;
+}
+.list-group header > section .youtube #bubble-gradient stop:nth-child(2) {
+  stop-color: #BF171D;
+}
+.list-group header > section .googleplus {
+  height: 1.8rem;
+  width: 1.84090909rem;
+}
+.list-group header > section .googleplus .googleplus-logo {
+  enable-background: new 0 0 134.658 131.646;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.list-group header > section .googleplus .g-character,
+.list-group header > section .googleplus .plus-character {
+  fill: #FFFFFF;
+}
+.list-group header > section .googleplus .background {
+  fill: #DD4B39;
+}
+.list-group header > section .pinterest {
+  height: 1.8rem;
+  width: 1.78723404rem;
+}
+.list-group header > section .pinterest .pinterest-logo {
+  enable-background: new 0 0 279.332489 281.3330078;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.list-group header > section .pinterest .p-character {
+  fill: #FFFFFF;
+}
+.list-group header > section .pinterest .background {
+  fill: #BD081C;
+}
+.list-group header > section .byutv {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.list-group header > section .byutv .byutv-logo {
+  enable-background: new 0 0 106.5942078 74;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.list-group header > section .byutv .byu-text-background {
+  fill: #FFFFFF;
+}
+.list-group header > section .byutv .oval-one {
+  opacity: 0.78;
+}
+.list-group header > section .byutv .oval-two {
+  opacity: 0.6909;
+}
+.list-group header > section .byutv .oval-three {
+  opacity: 0.11;
+  fill: #FFFFFF;
+}
+.list-group header > section .byutv .oval-four {
+  opacity: 0.12;
+  fill: #FFFFFF;
+}
+.list-group header > section .byutv #circle-byu-text-gradient stop:nth-child(1) {
+  stop-color: #29B0E6;
+}
+.list-group header > section .byutv #circle-byu-text-gradient stop:nth-child(2) {
+  stop-color: #29B0E6;
+}
+.list-group header > section .byutv #circle-byu-text-gradient stop:nth-child(3) {
+  stop-color: #2C82AE;
+}
+.list-group header > section .byutv #circle-byu-text-gradient stop:nth-child(4) {
+  stop-color: #25577E;
+}
+.list-group header > section .byutv #circle-byu-text-gradient stop:nth-child(5) {
+  stop-color: #14244B;
+}
+.list-group header > section .byutv #circle-byu-text-gradient stop:nth-child(6) {
+  stop-color: #101540;
+}
+.list-group header > section .byutv #tv-text-gradient stop:nth-child(1) {
+  stop-color: #29B0E6;
+}
+.list-group header > section .byutv #tv-text-gradient stop:nth-child(2) {
+  stop-color: #2CA2D2;
+}
+.list-group header > section .byutv #tv-text-gradient stop:nth-child(3) {
+  stop-color: #2D83AF;
+}
+.list-group header > section .byutv #tv-text-gradient stop:nth-child(4) {
+  stop-color: #26587F;
+}
+.list-group header > section .byutv #tv-text-gradient stop:nth-child(5) {
+  stop-color: #15254C;
+}
+.list-group header > section .byutv #tv-text-gradient stop:nth-child(6) {
+  stop-color: #101540;
+}
+.list-group header > section .byutv #moon-gradient stop,
+.list-group header > section .byutv #oval-one-gradient stop,
+.list-group header > section .byutv #oval-two-gradient stop {
+  stop-color: #FFFFFF;
+}
+.list-group header > section .byutv #moon-gradient stop:nth-child(1) {
+  stop-opacity: 0.3;
+}
+.list-group header > section .byutv #moon-gradient stop:nth-child(2) {
+  stop-opacity: 0.05;
+}
+.list-group header > section .byutv #moon-gradient stop:nth-child(3) {
+  stop-opacity: 0;
+}
+.list-group header > section .byutv #oval-one-gradient stop:nth-child(1) {
+  stop-opacity: 0.55;
+}
+.list-group header > section .byutv #oval-one-gradient stop:nth-child(2) {
+  stop-opacity: 0.25;
+}
+.list-group header > section .byutv #oval-one-gradient stop:nth-child(3) {
+  stop-opacity: 0.15;
+}
+.list-group header > section .byutv #oval-one-gradient stop:nth-child(4) {
+  stop-opacity: 0;
+}
+.list-group header > section .byutv #oval-two-gradient stop:nth-child(1) {
+  stop-opacity: 0.5;
+}
+.list-group header > section .byutv #oval-two-gradient stop:nth-child(2) {
+  stop-opacity: 0;
+}
+.list-group header > section a {
+  margin-top: 1rem;
+  transition: transform 300ms ease-in-out;
+}
+.list-group header > section a:not(:last-child) {
+  margin-right: 1.8rem;
+}
+.list-group header > section a:focus,
+.list-group header > section a:hover {
+  transform: scale(1.15) translateZ(0) rotate(0.0001deg);
+}
+.list-group header > section div {
+  align-items: baseline;
+  display: flex;
+}
+.list-group header h1,
+.list-group header h2,
+.list-group header [class^="icon"],
+.list-group header .loader {
+  flex: 0 1 auto;
+}
+.list-group header h1,
+.list-group header h2 {
+  margin: 0;
+  padding-bottom: .7rem;
+}
+.list-group header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.list-group header h2 {
+  font-size: 1.3rem;
+}
+.list-group header [class^="icon"] {
+  font-size: 2rem;
+}
+.list-group header .icon-down-arrow-fill + div {
+  margin-left: 4.5rem;
+}
+.list-group header div.youtube,
+.list-group header .icon-playlist {
+  margin-right: 1rem;
+}
+.list-group header div.youtube {
+  position: relative;
+  top: 0.2rem;
+}
+.list-group p.no-content {
+  font-size: 2rem;
+  color: #9B9B9B;
+  text-align: center;
+  padding: 2rem;
+}
+.list-group #grid-load-more.loading {
+  margin: 2rem auto;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3em #FFFFFF;
+  font-size: 1px;
+  height: 60em;
+  position: relative;
+  width: 60em;
+}
+.list-group #grid-load-more.loading::before,
+.list-group #grid-load-more.loading::after {
+  background: #000000;
+  content: "";
+  height: 62em;
+  position: absolute;
+  width: 32em;
+}
+.list-group #grid-load-more.loading::before {
+  animation: rotate 1.25s infinite ease 0.9375s;
+  border-radius: 62em 0 0 62em;
+  left: -1em;
+  top: -1em;
+  transform-origin: 31em 31em;
+}
+.list-group #grid-load-more.loading::after {
+  animation: rotate 1.25s infinite ease;
+  border-radius: 0 62em 62em 0;
+  left: 31em;
+  top: -1em;
+  transform-origin: 0 31em;
+}
+.grid-layout .list-group {
+  overflow: auto;
+  padding: 0;
+}
+.grid-layout .list-group.loading .loader {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1.5em #FFFFFF;
+  font-size: 1px;
+  height: 20em;
+  position: relative;
+  width: 20em;
+}
+.grid-layout .list-group.loading .loader::before,
+.grid-layout .list-group.loading .loader::after {
+  background: #000000;
+  content: "";
+  height: 22em;
+  position: absolute;
+  width: 12em;
+}
+.grid-layout .list-group.loading .loader::before {
+  animation: rotate 1s infinite ease 0.75s;
+  border-radius: 22em 0 0 22em;
+  left: -1em;
+  top: -1em;
+  transform-origin: 11em 11em;
+}
+.grid-layout .list-group.loading .loader::after {
+  animation: rotate 1s infinite ease;
+  border-radius: 0 22em 22em 0;
+  left: 11em;
+  top: -1em;
+  transform-origin: 0 11em;
+}
+.grid-layout .list-group header {
+  padding: 1rem 3.2rem;
+}
+@media (min-width: 512px) {
+  .list-group header {
+    padding-left: 5.2rem;
+    padding-right: 2.3rem;
+  }
+  .grid-layout .list-group header {
+    padding: 1rem 5.2rem;
+  }
+}

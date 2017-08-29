@@ -1,0 +1,656 @@
+.branding-bar {
+  background: #000000;
+  margin: 0 auto;
+  padding: 1.5rem 3.7rem;
+  position: relative;
+  width: 100%;
+  z-index: 200;
+}
+.branding-bar img {
+  display: initial;
+  margin-bottom: 1rem;
+  max-width: 22rem;
+}
+.branding-bar a {
+  color: #FFFFFF;
+}
+.branding-bar h1,
+.branding-bar h2,
+.branding-bar p {
+  color: #FFFFFF;
+  margin: 0;
+}
+.branding-bar h1,
+.branding-bar h2,
+.branding-bar p {
+  text-shadow: 0 0.1rem 0.1rem #000000;
+}
+.branding-bar h1 {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  .branding-bar h1 {
+    font-size: 3rem;
+  }
+}
+.branding-bar h2 {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 200;
+}
+@media (min-width: 1024px) {
+  .branding-bar h2 {
+    font-size: 2rem;
+  }
+}
+.branding-bar h3 {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.branding-bar p {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 100;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 300ms ease;
+  -moz-transition: height 300ms ease;
+  -o-transition: height 300ms ease;
+  transition: height 300ms ease;
+}
+.branding-bar .wrapper-icons {
+  display: flex;
+  margin-top: 1rem;
+}
+.branding-bar .social {
+  height: 2.2rem;
+}
+.branding-bar .social .facebook,
+.branding-bar .social .tumblr,
+.branding-bar .social .twitter,
+.branding-bar .social .youtube,
+.branding-bar .social .googleplus,
+.branding-bar .social .pinterest,
+.branding-bar .social .instagram,
+.branding-bar .social .byutv {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.branding-bar .social .facebook {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+.branding-bar .social .facebook .facebook-logo {
+  enable-background: new 0 0 266.8930969 266.8945923;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.branding-bar .social .facebook .f-character {
+  fill: #FFFFFF;
+}
+.branding-bar .social .facebook .background {
+  fill: #3C5A99;
+}
+.branding-bar .social .instagram {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+.branding-bar .social .instagram .instagram-logo {
+  enable-background: new 0 0 512 512;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.branding-bar .social .instagram .instagram-logo .st0 {
+  fill: #FFFFFF;
+}
+.branding-bar .social .tumblr {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+.branding-bar .social .tumblr .tumblr-logo {
+  enable-background: new 0 0 256 256;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.branding-bar .social .tumblr .t-character {
+  fill: #FFFFFF;
+}
+.branding-bar .social .tumblr .background {
+  fill: #35465C;
+}
+.branding-bar .social .twitter {
+  height: 2.2rem;
+  width: 2.70313901rem;
+}
+.branding-bar .social .twitter .twitter-logo {
+  enable-background: new 0 0 273.3895874 222.1782074;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.branding-bar .social .twitter .twitter-logo .bird {
+  fill: #FFFFFF;
+}
+.branding-bar .social .youtube {
+  height: 2.2rem;
+  width: 3.12454924rem;
+}
+.branding-bar .social .youtube .youtube-logo {
+  enable-background: new 0 0 1024 721;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.branding-bar .social .youtube .play-icon {
+  fill: #FFFFFF;
+}
+.branding-bar .social .youtube .play-icon-glare {
+  opacity: 0.12;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #420000;
+}
+.branding-bar .social .youtube #bubble-gradient stop:nth-child(1) {
+  stop-color: #E52D27;
+}
+.branding-bar .social .youtube #bubble-gradient stop:nth-child(2) {
+  stop-color: #BF171D;
+}
+.branding-bar .social .googleplus {
+  height: 2.2rem;
+  width: 2.25rem;
+}
+.branding-bar .social .googleplus .googleplus-logo {
+  enable-background: new 0 0 134.658 131.646;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.branding-bar .social .googleplus .g-character,
+.branding-bar .social .googleplus .plus-character {
+  fill: #FFFFFF;
+}
+.branding-bar .social .googleplus .background {
+  fill: #DD4B39;
+}
+.branding-bar .social .pinterest {
+  height: 2.2rem;
+  width: 2.18439716rem;
+}
+.branding-bar .social .pinterest .pinterest-logo {
+  enable-background: new 0 0 279.332489 281.3330078;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.branding-bar .social .pinterest .p-character {
+  fill: #FFFFFF;
+}
+.branding-bar .social .pinterest .background {
+  fill: #BD081C;
+}
+.branding-bar .social .byutv {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+.branding-bar .social .byutv .byutv-logo {
+  enable-background: new 0 0 106.5942078 74;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+.branding-bar .social .byutv .byu-text-background {
+  fill: #FFFFFF;
+}
+.branding-bar .social .byutv .oval-one {
+  opacity: 0.78;
+}
+.branding-bar .social .byutv .oval-two {
+  opacity: 0.6909;
+}
+.branding-bar .social .byutv .oval-three {
+  opacity: 0.11;
+  fill: #FFFFFF;
+}
+.branding-bar .social .byutv .oval-four {
+  opacity: 0.12;
+  fill: #FFFFFF;
+}
+.branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(1) {
+  stop-color: #29B0E6;
+}
+.branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(2) {
+  stop-color: #29B0E6;
+}
+.branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(3) {
+  stop-color: #2C82AE;
+}
+.branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(4) {
+  stop-color: #25577E;
+}
+.branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(5) {
+  stop-color: #14244B;
+}
+.branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(6) {
+  stop-color: #101540;
+}
+.branding-bar .social .byutv #tv-text-gradient stop:nth-child(1) {
+  stop-color: #29B0E6;
+}
+.branding-bar .social .byutv #tv-text-gradient stop:nth-child(2) {
+  stop-color: #2CA2D2;
+}
+.branding-bar .social .byutv #tv-text-gradient stop:nth-child(3) {
+  stop-color: #2D83AF;
+}
+.branding-bar .social .byutv #tv-text-gradient stop:nth-child(4) {
+  stop-color: #26587F;
+}
+.branding-bar .social .byutv #tv-text-gradient stop:nth-child(5) {
+  stop-color: #15254C;
+}
+.branding-bar .social .byutv #tv-text-gradient stop:nth-child(6) {
+  stop-color: #101540;
+}
+.branding-bar .social .byutv #moon-gradient stop,
+.branding-bar .social .byutv #oval-one-gradient stop,
+.branding-bar .social .byutv #oval-two-gradient stop {
+  stop-color: #FFFFFF;
+}
+.branding-bar .social .byutv #moon-gradient stop:nth-child(1) {
+  stop-opacity: 0.3;
+}
+.branding-bar .social .byutv #moon-gradient stop:nth-child(2) {
+  stop-opacity: 0.05;
+}
+.branding-bar .social .byutv #moon-gradient stop:nth-child(3) {
+  stop-opacity: 0;
+}
+.branding-bar .social .byutv #oval-one-gradient stop:nth-child(1) {
+  stop-opacity: 0.55;
+}
+.branding-bar .social .byutv #oval-one-gradient stop:nth-child(2) {
+  stop-opacity: 0.25;
+}
+.branding-bar .social .byutv #oval-one-gradient stop:nth-child(3) {
+  stop-opacity: 0.15;
+}
+.branding-bar .social .byutv #oval-one-gradient stop:nth-child(4) {
+  stop-opacity: 0;
+}
+.branding-bar .social .byutv #oval-two-gradient stop:nth-child(1) {
+  stop-opacity: 0.5;
+}
+.branding-bar .social .byutv #oval-two-gradient stop:nth-child(2) {
+  stop-opacity: 0;
+}
+.branding-bar .social a {
+  margin-top: 1rem;
+  transition: transform 300ms ease-in-out;
+}
+.branding-bar .social a:not(:last-child) {
+  margin-right: 1.8rem;
+}
+.branding-bar .social a:focus,
+.branding-bar .social a:hover {
+  transform: scale(1.15) translateZ(0) rotate(0.0001deg);
+}
+.branding-bar .social a {
+  margin-top: 0;
+}
+.branding-bar .icon-star,
+.branding-bar .icon-star-fill {
+  margin-right: 0;
+  width: 2rem;
+}
+.branding-bar .icon-info,
+.branding-bar .icon-star,
+.branding-bar .icon-star-fill {
+  color: #FFFFFF;
+  font-size: 2.2rem;
+}
+@media (min-width: 512px) {
+  .branding-bar .icon-info,
+  .branding-bar .icon-star,
+  .branding-bar .icon-star-fill {
+    font-size: 1.8rem;
+  }
+}
+.branding-bar .icon-info:hover,
+.branding-bar .icon-star:hover,
+.branding-bar .icon-star-fill:hover {
+  color: #008DDF;
+  cursor: pointer;
+}
+.branding-bar .icon-info,
+.branding-bar .icon-star,
+.branding-bar .icon-star-fill {
+  display: flex;
+}
+.branding-bar .icon-info h2,
+.branding-bar .icon-star h2,
+.branding-bar .icon-star-fill h2 {
+  display: none;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 0;
+  text-indent: -99999999px;
+  width: 0;
+}
+.branding-bar .icon-star + .social::before,
+.branding-bar .icon-star-fill + .social::before {
+  color: #FFFFFF;
+  font-size: 2rem;
+  content: "|";
+  display: inline-block;
+  font-family: "Nunito", sans-serif;
+  height: 2rem;
+  margin: 0 2rem;
+  position: relative;
+  top: -3px;
+  width: 1rem;
+}
+.branding-bar .icon-info + .social::before {
+  color: #FFFFFF;
+  font-size: 2rem;
+  content: "|";
+  display: inline-block;
+  font-family: "Nunito", sans-serif;
+  height: 2rem;
+  margin: 0 .8rem;
+  position: relative;
+  top: -3px;
+  width: 1rem;
+}
+.branding-bar .icon-info + .icon-star,
+.branding-bar .icon-info + .icon-star-fill {
+  margin-left: 1.8rem;
+}
+.branding-bar .icon-star-fill {
+  color: #FFFFFF;
+}
+.branding-bar .icon-star-fill:hover {
+  color: #008DDF;
+}
+@media (min-width: 512px) {
+  .branding-bar {
+    padding: 1.5rem 5.2rem;
+  }
+  .branding-bar .social {
+    height: 1.8rem;
+  }
+  .branding-bar .social .facebook,
+  .branding-bar .social .tumblr,
+  .branding-bar .social .twitter,
+  .branding-bar .social .youtube,
+  .branding-bar .social .googleplus,
+  .branding-bar .social .pinterest,
+  .branding-bar .social .instagram,
+  .branding-bar .social .byutv {
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .branding-bar .social .facebook {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+  .branding-bar .social .facebook .facebook-logo {
+    enable-background: new 0 0 266.8930969 266.8945923;
+    /* IE ONLY */
+    height: inherit;
+    width: inherit;
+  }
+  .branding-bar .social .facebook .f-character {
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .facebook .background {
+    fill: #3C5A99;
+  }
+  .branding-bar .social .instagram {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+  .branding-bar .social .instagram .instagram-logo {
+    enable-background: new 0 0 512 512;
+    /* IE ONLY */
+    height: inherit;
+    width: inherit;
+  }
+  .branding-bar .social .instagram .instagram-logo .st0 {
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .tumblr {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+  .branding-bar .social .tumblr .tumblr-logo {
+    enable-background: new 0 0 256 256;
+    /* IE ONLY */
+    height: inherit;
+    width: inherit;
+  }
+  .branding-bar .social .tumblr .t-character {
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .tumblr .background {
+    fill: #35465C;
+  }
+  .branding-bar .social .twitter {
+    height: 1.8rem;
+    width: 2.21165919rem;
+  }
+  .branding-bar .social .twitter .twitter-logo {
+    enable-background: new 0 0 273.3895874 222.1782074;
+    /* IE ONLY */
+    height: inherit;
+    width: inherit;
+  }
+  .branding-bar .social .twitter .twitter-logo .bird {
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .youtube {
+    height: 1.8rem;
+    width: 2.55644938rem;
+  }
+  .branding-bar .social .youtube .youtube-logo {
+    enable-background: new 0 0 1024 721;
+    /* IE ONLY */
+    height: inherit;
+    width: inherit;
+  }
+  .branding-bar .social .youtube .play-icon {
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .youtube .play-icon-glare {
+    opacity: 0.12;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #420000;
+  }
+  .branding-bar .social .youtube #bubble-gradient stop:nth-child(1) {
+    stop-color: #E52D27;
+  }
+  .branding-bar .social .youtube #bubble-gradient stop:nth-child(2) {
+    stop-color: #BF171D;
+  }
+  .branding-bar .social .googleplus {
+    height: 1.8rem;
+    width: 1.84090909rem;
+  }
+  .branding-bar .social .googleplus .googleplus-logo {
+    enable-background: new 0 0 134.658 131.646;
+    /* IE ONLY */
+    height: inherit;
+    width: inherit;
+  }
+  .branding-bar .social .googleplus .g-character,
+  .branding-bar .social .googleplus .plus-character {
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .googleplus .background {
+    fill: #DD4B39;
+  }
+  .branding-bar .social .pinterest {
+    height: 1.8rem;
+    width: 1.78723404rem;
+  }
+  .branding-bar .social .pinterest .pinterest-logo {
+    enable-background: new 0 0 279.332489 281.3330078;
+    /* IE ONLY */
+    height: inherit;
+    width: inherit;
+  }
+  .branding-bar .social .pinterest .p-character {
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .pinterest .background {
+    fill: #BD081C;
+  }
+  .branding-bar .social .byutv {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+  .branding-bar .social .byutv .byutv-logo {
+    enable-background: new 0 0 106.5942078 74;
+    /* IE ONLY */
+    height: inherit;
+    width: inherit;
+  }
+  .branding-bar .social .byutv .byu-text-background {
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .byutv .oval-one {
+    opacity: 0.78;
+  }
+  .branding-bar .social .byutv .oval-two {
+    opacity: 0.6909;
+  }
+  .branding-bar .social .byutv .oval-three {
+    opacity: 0.11;
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .byutv .oval-four {
+    opacity: 0.12;
+    fill: #FFFFFF;
+  }
+  .branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(1) {
+    stop-color: #29B0E6;
+  }
+  .branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(2) {
+    stop-color: #29B0E6;
+  }
+  .branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(3) {
+    stop-color: #2C82AE;
+  }
+  .branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(4) {
+    stop-color: #25577E;
+  }
+  .branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(5) {
+    stop-color: #14244B;
+  }
+  .branding-bar .social .byutv #circle-byu-text-gradient stop:nth-child(6) {
+    stop-color: #101540;
+  }
+  .branding-bar .social .byutv #tv-text-gradient stop:nth-child(1) {
+    stop-color: #29B0E6;
+  }
+  .branding-bar .social .byutv #tv-text-gradient stop:nth-child(2) {
+    stop-color: #2CA2D2;
+  }
+  .branding-bar .social .byutv #tv-text-gradient stop:nth-child(3) {
+    stop-color: #2D83AF;
+  }
+  .branding-bar .social .byutv #tv-text-gradient stop:nth-child(4) {
+    stop-color: #26587F;
+  }
+  .branding-bar .social .byutv #tv-text-gradient stop:nth-child(5) {
+    stop-color: #15254C;
+  }
+  .branding-bar .social .byutv #tv-text-gradient stop:nth-child(6) {
+    stop-color: #101540;
+  }
+  .branding-bar .social .byutv #moon-gradient stop,
+  .branding-bar .social .byutv #oval-one-gradient stop,
+  .branding-bar .social .byutv #oval-two-gradient stop {
+    stop-color: #FFFFFF;
+  }
+  .branding-bar .social .byutv #moon-gradient stop:nth-child(1) {
+    stop-opacity: 0.3;
+  }
+  .branding-bar .social .byutv #moon-gradient stop:nth-child(2) {
+    stop-opacity: 0.05;
+  }
+  .branding-bar .social .byutv #moon-gradient stop:nth-child(3) {
+    stop-opacity: 0;
+  }
+  .branding-bar .social .byutv #oval-one-gradient stop:nth-child(1) {
+    stop-opacity: 0.55;
+  }
+  .branding-bar .social .byutv #oval-one-gradient stop:nth-child(2) {
+    stop-opacity: 0.25;
+  }
+  .branding-bar .social .byutv #oval-one-gradient stop:nth-child(3) {
+    stop-opacity: 0.15;
+  }
+  .branding-bar .social .byutv #oval-one-gradient stop:nth-child(4) {
+    stop-opacity: 0;
+  }
+  .branding-bar .social .byutv #oval-two-gradient stop:nth-child(1) {
+    stop-opacity: 0.5;
+  }
+  .branding-bar .social .byutv #oval-two-gradient stop:nth-child(2) {
+    stop-opacity: 0;
+  }
+  .branding-bar .social a {
+    margin-top: 1rem;
+    transition: transform 300ms ease-in-out;
+  }
+  .branding-bar .social a:not(:last-child) {
+    margin-right: 1.8rem;
+  }
+  .branding-bar .social a:focus,
+  .branding-bar .social a:hover {
+    transform: scale(1.15) translateZ(0) rotate(0.0001deg);
+  }
+  .branding-bar .social a {
+    margin-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .branding-bar h1,
+  .branding-bar h2,
+  .branding-bar p {
+    position: static;
+    white-space: normal;
+  }
+  .branding-bar .icon-info h2,
+  .branding-bar .icon-star h2,
+  .branding-bar .icon-star-fill h2 {
+    display: initial;
+    text-indent: 0;
+    width: auto;
+  }
+  .branding-bar .icon-info::before {
+    margin-right: 1rem;
+  }
+  .branding-bar .icon-star,
+  .branding-bar .icon-star-fill,
+  .branding-bar .icon-star-info {
+    width: auto;
+  }
+  .branding-bar .icon-star::before,
+  .branding-bar .icon-star-fill::before,
+  .branding-bar .icon-star-info::before {
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .branding-bar {
+    padding: 1.5rem 1rem;
+    width: 128rem;
+  }
+}

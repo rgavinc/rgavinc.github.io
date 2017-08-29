@@ -1,0 +1,226 @@
+@import (reference) url("../../../variables/colors");
+@import (reference) url("../../../variables/breakpoints");
+@import (reference) url("../../../mixins/fonts");
+
+.list {
+	overflow: hidden;
+
+	&.hidden {
+		height: 0; // Solves an issue where hidding and showing and resizing causes the list to be the incorrect size.
+	}
+
+	.slick-list {
+		margin: 0 2.7rem; // .5 (combines with list item margin to 1rem) + .5 (list item margin) + 1.7 (scroll bar width)
+		overflow: visible;
+	}
+
+	.slick-prev, .slick-next {
+		.font-slick-smallicon;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		outline: none;
+		position: absolute;
+		top: 0;
+		width: 4.7rem; // 2 (button width) + .5 (combines with list item margin to 1rem) + .5 (list item margin) + 1.7 (scroll bar width)
+	}
+	
+	.slick-prev, .slick-next {
+		&::before {
+			flex: 0 1 auto;
+			position: relative;
+		}
+
+		&:not(.slick-disabled) {
+			&:hover, &:focus {
+				color: @primary-white;
+			}
+		}
+	}
+
+	.slick-prev {
+		left: 0;
+
+		&::before {
+			left: 0.9rem; // Centers the icon taking into account the scroll bar width
+		}
+	}
+
+	.slick-next {
+		right: 0;
+	}
+
+	.slick-disabled {
+		color: transparent;
+		cursor: default;
+	}
+
+	.slick-slide {
+		outline: none;
+		margin: 0 0.5rem;
+	}
+
+	a {
+		display: block !important;
+		position: relative;
+
+		&:hover {
+			img {
+				transform: scale3d(1.05, 1.05, 1);
+			}
+		}
+
+		&.now, &.next {
+			bottom: 2rem;
+		}
+
+		&.now label {
+			background-color: @primary-red;
+		}
+
+		&.next label {
+			background-color: @primary-blue;
+		}
+	}
+
+	figure {
+		margin: 0;
+		overflow: hidden;
+		position: relative;
+	}
+
+	img {
+		transition: transform .5s;
+		width: 100%;
+	}
+
+	label {
+		.font-list-label;
+		box-shadow: 0.1rem 0.1rem 0.5rem @primary-black;
+		cursor: pointer;
+		left: -0.3rem;
+		padding: 0.5rem;
+		position: relative;
+		text-transform: uppercase;
+		top: 2.2rem;
+		z-index: 100;
+		transform: scale3d(1, 1, 1);
+	}
+
+	.titles {
+		color: @primary-white;
+		position: relative;
+		text-shadow: 0 0.1rem 0.1rem @primary-black;
+		width: 100%;
+		z-index: 200;
+
+		&::before {
+			background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, @primary-black 100%);
+			content: "";
+			display: block;
+			height: 4rem;
+			left: 0;
+			position: absolute;
+			top: -3.9rem;
+			width: 100%;
+			transform: scale3d(1, 1, 1);
+			z-index: -100;
+		}
+	}
+
+	h1, h2 {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	h1 {
+		.font-item-subtitle;
+		margin-top: 0.5rem;
+	}
+
+	h2 {
+		.font-item-title;
+	}
+
+	&.stack {
+		.slick-slide div + div {
+			margin-top: 1rem;
+		}
+	}
+}
+
+.grid-layout .list {
+	margin: 1rem 3.7rem 2rem 3.7rem;
+	overflow: hidden;
+
+	a {
+		display: block;
+
+		+ a {
+			margin-top: 1rem;
+		}
+	}
+}
+
+@media (min-width: @breakpoint-sm) {
+	.list, .hero.list {
+		.slick-list {
+			margin: 0 4.7rem; // 2 (button width) + .5 (combines with list item margin to 1rem) + .5 (list item margin) + 1.7 (scroll bar width)
+			overflow: hidden;
+		}
+		&.hero {
+			.slick-slide {
+				> div:first-child {
+					a[data-list-index="0"] {
+						height: 29.2rem;
+						width: 41.6rem !important;
+
+						h2 {
+							.font-hero-title;
+						}
+
+						h1 {
+							.font-hero-subtitle;
+						}
+
+					}
+				}
+
+				> div div:empty {
+					display: none !important;
+				}
+
+				> div {
+					a:not([data-list-index="0"]) {
+						height: 14.1rem;
+						width: 19.2rem !important;
+					}
+				}
+
+			    > div:last-child a:not([data-list-index="0"]) {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
+
+	.grid-layout .list {
+		margin: 1rem 5.2rem 2rem 5.2rem;
+
+		a + a {
+			margin-top: 0;
+		}
+		
+		> a, > section, > div {
+			&:not([style]) {
+				height: 0;
+				width: 0;
+			}	
+		}
+	}
+}

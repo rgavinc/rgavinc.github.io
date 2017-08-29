@@ -1,0 +1,199 @@
+.list.nnl .nnl-item label {
+  background-color: #383838;
+}
+.list.nnl .nnl-item:first-child label {
+  background-color: #FF0000;
+}
+.list.nnl .nnl-item:nth-child(2) label {
+  background-color: #008DDF;
+}
+.list.nnl .nnl-item time + h2 {
+  margin-top: 0.5rem;
+}
+.list.nnl .nnl-item label:hover {
+  cursor: auto;
+}
+#main a.nnl-item:hover figure::before {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: #ffffff;
+}
+#main a.nnl-item figure {
+  margin-right: 1rem;
+}
+#main a.nnl-item figure::before,
+#main a.nnl-item figure::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 100;
+  transform: scale3d(1, 1, 1);
+}
+#main a.nnl-item figure::before {
+  background: rgba(0, 0, 0, 0.3);
+  border: 0.2rem solid rgba(255, 255, 255, 0.8);
+  border-radius: 100%;
+  height: 5rem;
+  left: calc(50% - 2.5rem);
+  top: calc(50% - 2.5rem);
+  width: 5rem;
+}
+#main a.nnl-item figure::after {
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.6);
+  border-style: solid;
+  border-width: 1rem 0 1rem 1.5rem;
+  left: calc(50% - 0.5rem);
+  margin-left: 0.2rem;
+  top: calc(50% - 0.8rem);
+}
+#main a.nnl-item figure:hover::before {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: #ffffff;
+}
+#main a.nnl-item figure:hover::after {
+  border-color: transparent transparent transparent #ffffff;
+}
+#main > .list-group {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+#main > .list-group header {
+  display: none;
+}
+#main > .list-group .list.nnl {
+  background: black;
+}
+#main > .list-group .list.nnl button {
+  background: black;
+}
+#main > .list-group .list.nnl button::before {
+  position: relative;
+  top: 1.4rem;
+}
+#main > .list-group .list.nnl .slick-list {
+  margin-left: 3.2rem;
+  margin-right: 0;
+}
+#main > .list-group .list.nnl .slick-slide {
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+  width: 24rem;
+}
+#main > .list-group .list.nnl .slick-slide:first-child {
+  min-width: 24rem;
+  width: 40rem;
+}
+#main > .list-group .list.nnl .slick-slide:first-child img {
+  display: block;
+}
+#main > .list-group .list.nnl .slick-slide:first-child .titles {
+  max-width: calc(100% - 17rem);
+}
+#main > .list-group .list.nnl .slick-slide:not(:last-child) time::after,
+#main > .list-group .list.nnl .slick-slide:not(:last-child) .titles::before {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: -0.5rem;
+  top: 0;
+}
+#main > .list-group .list.nnl .slick-slide:not(:last-child) time::after {
+  border: 0.1rem solid #1E1E1E;
+}
+#main > .list-group .list.nnl .slick-slide:not(:last-child) .titles::before {
+  background-image: none;
+  border: 0.1rem solid #1E1E1E;
+  left: auto;
+  width: auto;
+}
+#main > .list-group .list.nnl .slick-slide:hover label::before,
+#main > .list-group .list.nnl .slick-slide:focus label::before {
+  animation: shine .75s;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 50%;
+}
+#main > .list-group .list.nnl .slick-slide:nth-child(n+3):hover label::before,
+#main > .list-group .list.nnl .slick-slide:nth-child(n+3):focus label::before {
+  animation: shine .75s;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 50%;
+}
+#main > .list-group .list.nnl figure {
+  margin-right: 1rem;
+}
+#main > .list-group .list.nnl img {
+  display: none;
+  height: 9rem;
+  width: 16rem;
+}
+#main > .list-group .list.nnl time {
+  color: red;
+  font-weight: 400;
+  font-size: 1.5rem;
+  display: block;
+  padding: 1rem 0 0.8rem 0;
+  position: relative;
+  z-index: 220;
+}
+#main > .list-group .list.nnl label {
+  border-radius: 0.5rem;
+  box-shadow: none;
+  left: 0;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  position: relative;
+  top: 0;
+}
+#main > .list-group .list.nnl figure,
+#main > .list-group .list.nnl .titles {
+  float: left;
+}
+#main > .list-group .list.nnl .titles {
+  background-image: none;
+  height: 10rem;
+  padding: 1rem 0.5rem 1rem 0;
+  position: relative;
+  text-shadow: none;
+  white-space: nowrap;
+}
+#main > .list-group .list.nnl h1,
+#main > .list-group .list.nnl h2 {
+  margin: 0;
+}
+#main > .list-group .list.nnl h2 {
+  color: red;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+#main > .list-group .list.nnl h1 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: blue;
+  margin-top: 1rem;
+}
+@media (min-width: 512px) {
+  #main > .list-group .list.nnl.hero .slick-slide:first-child {
+    height: 32.8rem;
+  }
+  #main > .list-group .list.nnl.hero .slick-slide:not(:first-child) > div {
+    height: 15.9rem;
+  }
+  #main > .list-group .list.nnl .slick-list {
+    margin: 0 5.2rem;
+  }
+}

@@ -1,0 +1,67 @@
+.content-banner {
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+}
+.content-banner .branding-bar {
+  background: transparent;
+  bottom: 0;
+  left: 0;
+  margin-top: -8rem;
+  right: 0;
+  text-align: center;
+}
+.content-banner .branding-bar p {
+  margin: 0 auto;
+  margin-top: 1rem;
+  max-width: 60rem;
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+.content-banner .branding-bar h1 {
+  padding-top: 2rem;
+}
+.content-banner .branding-bar .wrapper-icons {
+  justify-content: center;
+}
+.content-banner .img-gradient {
+  background: linear-gradient(to top, #000000 3rem, transparent 15rem);
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.content-banner .images figure {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.content-banner .images img {
+  margin: 0 auto;
+}
+.content-banner .images::after {
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .img-gradient {
+    width: 100%;
+  }
+  .images img {
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .img-gradient {
+    width: 128rem;
+  }
+  .images img {
+    width: 128rem;
+  }
+}

@@ -1,0 +1,179 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/social-icons");
+@import (reference) url("../../mixins/fonts");
+
+.branding-bar {
+	background: @primary-black;
+	margin: 0 auto;
+	padding: 1.5rem 3.7rem;
+	position: relative;
+	width: 100%;
+	z-index: 200;
+
+	img {
+		display: initial;
+		margin-bottom: 1rem;
+		max-width: 22rem;
+	}
+
+	a {
+		color: @primary-white;
+	}
+
+	h1, h2, p {
+		color: @primary-white;
+		margin: 0;
+	}
+
+	h1, h2, p {
+		text-shadow: 0 0.1rem 0.1rem @primary-black;
+	}
+
+	h1 {
+		.font-branding-title;
+		margin-bottom: 1rem;
+	}
+
+	h2 {
+		.font-branding-subtitle;
+		margin-bottom: 1rem;
+	}
+
+	h3 {
+		display: inline-block;
+		margin-right: 1rem;
+	}
+
+	p {
+		.font-banner-description;
+		height: 0;
+		overflow: hidden;
+		-webkit-transition: height 300ms ease;
+  		-moz-transition: height 300ms ease;
+  		-o-transition: height 300ms ease;
+  		transition: height 300ms ease;
+	}
+
+	.wrapper-icons {
+		display: flex;
+	}
+
+	.social {
+		.social-icons();
+		height: 1.8rem;
+		
+		a {
+			margin-top: 0;
+		}
+	}
+
+	.icon-star, .icon-star-fill {
+		margin-right: 0;
+		width: 2rem;
+	}
+
+	.icon-info, .icon-star, .icon-star-fill {
+		.font-branding-icon;
+
+		&:hover {
+			color: @primary-blue;
+			cursor: pointer;
+		}
+	}
+
+	.icon-info, .icon-star, .icon-star-fill {
+		display: flex;
+
+		& h2 {
+			display: none;
+			font-family: "Nunito", sans-serif;
+			margin-bottom: 0;
+			text-indent: -99999999px;
+			width: 0;
+		}
+	}
+	
+	.icon-star + .social::before, .icon-star-fill + .social::before {
+		.font-icon-separator;
+		content: "|";
+		display: inline-block;
+		font-family: "Nunito", sans-serif;
+		height: 2rem;
+		margin: 0 .8rem;
+		position: relative;
+		top: -3px;
+		width: 1rem;
+	}
+
+	.icon-info + .social::before {
+		.font-icon-separator;
+		content: "|";
+		display: inline-block;
+		font-family: "Nunito", sans-serif;
+		height: 2rem;
+		margin: 0 .8rem;
+		position: relative;
+		top: -3px;
+		width: 1rem;
+	}
+
+	.icon-info + .icon-star, .icon-info + .icon-star-fill {
+		margin-left: 1.8rem;
+	}
+
+	.icon-star-fill {
+		color: @primary-white;
+
+		&:hover {
+			color: @primary-blue;
+		}
+	}
+}
+
+
+@media(min-width: @breakpoint-sm) {
+	.branding-bar {
+		padding: 1.5rem 5.2rem;
+	}
+}
+
+@media (min-width: @breakpoint-md) {	
+	.branding-bar {
+		h1, h2, p {
+			position: static;
+			white-space: normal;
+		}
+
+		.icon-info, .icon-star, .icon-star-fill {
+
+			& h2 {
+				display: initial;
+				text-indent: 0;
+				width: auto;
+			}
+		}
+
+		.icon-info {
+		
+			&::before {
+				margin-right: 1rem;
+			}
+		}	
+
+		.icon-star, .icon-star-fill, .icon-star-info {
+			width: auto;
+
+			&::before {
+				margin-right: 1rem;
+			}
+		}
+	}
+}
+
+@media (min-width: @breakpoint-xl) {
+	.branding-bar {
+		padding: 1.5rem 1rem;
+		width: 128rem;
+	}
+}

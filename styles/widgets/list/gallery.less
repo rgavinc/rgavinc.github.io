@@ -1,0 +1,252 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/multiline-ellipsis");
+@import (reference) url("../../mixins/fonts");
+
+.list.gallery {
+	section {
+		cursor: pointer;
+	}
+
+	section:not(.error) {
+		outline: none;
+	}
+
+	figure {
+		pointer-events: none;
+	}
+
+	img {
+		height: 20rem;
+		margin: 0 auto;
+		width: auto;
+	}
+}
+
+.grid-layout .list.gallery section {
+	margin: 0;
+
+	& + section {
+		margin-top: 2rem;
+	}
+
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+.vex {
+	z-index: 100000;
+}
+
+#vex-controls {
+	background: rgba(0, 0, 0, 0.6);
+	height: 100%;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1111;
+
+	.vex-close {
+		background: rgba(0, 141, 223, 0.5);
+		cursor: pointer;
+		margin-bottom: 2rem;
+		padding: 1rem;
+		position: absolute;
+		right: 2rem;
+		top: 2rem;
+		width: 4rem;
+
+		&::before {
+			.font-gallery-xicon;
+			background: none;
+			content: "\e900";
+			font-family: "byutv3org";
+			padding: 0;
+		}
+
+		&:hover {
+			background: rgba(0, 141, 223, 1);
+		}
+	}
+
+	.icon-left-arrow, .icon-right-arrow {
+		bottom: 2rem;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		height: 2.6rem;
+		justify-content: center;
+		margin: auto;
+		padding: 2rem;
+		position: absolute;
+		width: 8.6rem;
+
+		&::before {
+			.font-gallery-arrow;
+			background: rgba(0, 141, 223, 0.5);
+		}
+
+		&:hover::before {
+			background: rgba(0, 141, 223, 1);
+		}
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+	.icon-left-arrow {
+		align-items: center;
+		left: 0;
+		margin-left: 2rem;
+
+		&::before {
+			padding: 1rem 3rem 1rem 3.6rem;
+		}
+	}
+
+	.icon-right-arrow {
+		align-items: center;
+		margin-right: 2rem;
+		right: 0;
+
+		&::before {
+			padding: 1rem 3.6rem 1rem 3rem;
+		}
+	}
+}
+
+div.gallery.vex.vex-theme-plain {
+	padding: 0;
+	pointer-events: none;
+
+	.vex-overlay {
+		display: none;
+	}
+
+	@margin-sides: 5rem;
+	.vex-content {
+		animation: none;
+		align-items: center;
+		background: none;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		padding: 0;
+		width: initial;
+
+		> .vex-close {
+			display: none;
+		}
+
+		section {
+			background: @primary-white;
+			padding: 2rem;
+			pointer-events: all;
+			position: relative;
+			margin: 0 auto;
+			max-height: 100%;
+			max-width: calc(100% ~"-" 4rem);
+		}
+
+		img {
+			height: auto;
+			margin: 0 auto;
+			max-height: calc(100vh ~"-" 24rem);
+			max-width: 100%;
+			width: auto;
+		}
+
+		h1, p {
+			margin: 0;
+		}
+
+		h1 {
+			.font-gallery-title;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		p {
+			.font-gallery-description;
+			margin-top: 1rem;
+			.multiLine-ellipsis();
+		}
+
+		footer {
+			margin-top: 2rem;
+			max-height: 5.6rem;
+			padding: 0 4rem 0 0;
+			position: relative;
+
+			a {
+				color: @primary-gray-light;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+
+	&.vex-closing {
+		.vex-content {
+			animation: vex-fadeout .5s;
+		}
+	}
+}
+
+@media (min-width: @breakpoint-sm) {
+	.list.gallery {
+		.list section:not(.error) {
+			overflow: hidden;
+		}
+	}
+
+	.grid-layout .list.gallery section + section {
+		margin-top: 0;
+	}
+
+	div.gallery.vex.vex-theme-plain .vex-content section {
+		max-width: calc(100% ~"-" 18rem);
+	}
+
+	#vex-controls {
+		.icon-left-arrow, .icon-right-arrow {
+			bottom: 0;
+			height: 11rem;
+			top: 0;
+			width: 5rem;
+
+			&::before {
+				min-height: 3rem;
+			}
+		}
+
+		.icon-left-arrow::before {
+			padding: 4rem 0.5rem 4rem 1.5rem;
+		}
+
+		.icon-right-arrow::before {
+			padding: 4rem 1.5rem 4rem 0.5rem;
+		}
+	}
+}
+
+@media (min-height: 400px) {
+	#vex-controls .vex-close {
+		left: 0;
+		margin: auto;
+		right: 0;
+	}
+
+	div.gallery.vex.vex-theme-plain .vex-content img {
+		max-height: calc(100vh ~"-" 37.2rem);
+	}
+}

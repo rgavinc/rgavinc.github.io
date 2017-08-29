@@ -1,0 +1,115 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/multiline-ellipsis");
+@import (reference) url("../../mixins/fonts");
+
+.player-banner {
+	background: @primary-black;
+	width: 100%;
+	z-index: 200;
+
+	.branding-bar {
+		h1, h2 {
+			position: static;
+		}
+
+		h1 {
+			padding-top: 2rem;
+		}
+
+		p {
+			margin-top: 1rem;
+		}
+	}
+
+	.innerWrapper.oo-player {
+		width: auto !important;
+	}
+
+	.oo-player-container {
+
+		.login-required {
+			.font-player-signin;
+			height: 40vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.oo-state-screen-selectable:hover {
+			cursor: pointer;
+		}
+
+		.oo-state-screen .oo-action-icon {
+			left: calc(50% + .75rem);
+    		top: 50%;
+
+			&:hover span.oo-icon::before {
+				z-index: -100;
+				background: rgba(0, 0, 0, 0.7);
+			}
+		
+			span.oo-icon, .oo-player-container .oo-spinner-screen .oo-action-icon span.oo-icon {
+				.font-player-icon;
+			
+				&::before {
+					border: 0.2rem solid @primary-white;
+					border-radius: 100%;
+					content: "";
+					background: rgba(0, 0, 0, 0.3);
+					display: block;
+					height: 5rem;
+					left: calc(50% ~"-" 2.8rem);
+					position: absolute;
+					top: calc(50% ~"-" 2.8rem);
+					width: 5rem;
+					box-sizing: content-box;
+				}
+			}
+		}
+
+		.oo-state-screen .oo-action-icon, .oo-spinner-screen .oo-action-icon {
+			&:hover, &:focus, &:active {
+				span.oo-icon {
+					opacity: 1 !important;
+
+					&::before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+		.oo-start-screen .oo-start-screen-linear-gradient {
+			background: linear-gradient(to top, @primary-black 3rem, transparent 15rem)
+		}
+	}
+}
+
+@media (min-width: @breakpoint-md) {
+	.player-banner {
+		align-items: center;
+		display: flex;
+		flex-direction: column-reverse;
+
+		.oo-player-container {
+			order: 1;
+			width: 100%;
+		}
+
+		.branding-bar {
+			background: @primary-black;
+			position: relative;
+		}
+	}
+}
+
+@media (min-width: @breakpoint-xl) {
+	.player-banner {
+		justify-content: center;
+
+		.oo-player-container {
+			width: 128rem;
+		}
+	}
+}

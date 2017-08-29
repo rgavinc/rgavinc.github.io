@@ -1,0 +1,288 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/multiline-ellipsis");
+@import (reference) url("../../mixins/shine");
+@import (reference) url("../../mixins/fonts");
+@import (reference) url("../../keyframes/keyframes");
+
+.banner {
+	overflow: hidden;
+	position: relative;
+
+	.images figure img {
+		&:hover, &:focus {
+			transform: scale3d(1.05,1.05,1);
+		}
+	}
+
+	&:hover {
+		.info label {
+			.shine();
+		}
+
+		.info .no-link label::before {
+			animation: none;
+		}
+	}
+
+	.images {
+		background-color: @primary-black;
+		
+		.slick-slide {
+			width: 100vw;
+		}
+
+		figure {
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		img {
+			height: auto;
+			transition: opacity 1s,transform .5s;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+
+		.no-link img:hover, &:focus {
+			transform: none;
+		}
+	}
+
+	.info, .info .slick-track {
+		align-items: flex-end;
+		display: flex;
+	}
+	
+	.info {
+		bottom: 0;
+		padding: 0 7rem 4.5rem 7rem;
+		pointer-events: none;
+		position: absolute;
+		width: 100%;
+		z-index: 200;
+		
+		&::after {
+			background: linear-gradient(to top, @primary-black 3rem, transparent 15rem);
+			bottom: 0;
+			content: "";
+			height: 17rem;
+			left: -100vw;
+			pointer-events: none;
+			position: absolute;
+			width: 300vw;
+			z-index: -100;
+		}
+
+		a, .no-link {
+			color: @primary-white;
+			outline: none;
+			text-align: center;
+			
+			&:hover, &:focus {
+				text-decoration: none;
+			}
+		}
+		
+		label {
+			.font-banner-label;
+			background-color: @primary-blue;
+			border-radius: 0.5rem;
+			cursor: pointer;
+			margin-top: 1rem;
+			overflow: hidden;
+			padding: 0.5rem 1rem;
+			position: relative;
+			text-transform: uppercase;
+			vertical-align: bottom; // https://stackoverflow.com/a/20566810/2344083
+		}
+		
+		h1, h2, p {
+			margin: 0;
+			text-shadow: 0 0.1rem 0.1rem @primary-black;
+		}
+		
+		h1, h2 {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		
+		h1 {
+			.font-banner-title
+		}
+		
+		h2 {
+			.font-banner-subtitle;
+			margin-top: 0.5rem;
+
+			&:empty {
+				display: none;
+			}
+		}
+		
+		p {
+			.font-banner-description;
+			display: none;
+			margin-top: 0.5rem;
+			height: 0;
+		}
+	}
+
+	.buttons {
+		display: none;
+	}
+}
+
+@media (min-width: @breakpoint-sm) {
+	.banner {
+		.images {
+			.slick-slide {
+				margin: 0 0.5rem;
+				width: 80vw;
+			}
+		}
+
+		.images > div::before, .images > div::after {
+			background: rgba(0,0,0,0.6);
+			content: "";
+    		display: block;
+    		height: 100%;
+    		left: 0;
+    		position: absolute;
+    		top: 0;
+			width: 10vw;
+			z-index: 100;
+		}
+		
+		.images > div::before, .images > div::after, .buttons div {
+			width: ~"calc(10vw - .85rem)";
+		}
+		
+
+		.images > div::after {
+			left: auto;
+    		right: 0;
+		}
+		
+		.info {
+			left: 10vw;
+			padding: 0 0 2rem 0;
+			width: ~"calc(80vw + 0.1rem - .85rem)"; // 0.1rem esolves an issue where a thin line shows on the right side of the banner.
+		}
+
+		.buttons {
+			bottom: 0;
+			display: flex;
+			position: absolute;
+			justify-content: space-between;
+			pointer-events: none;
+			height: 100%;
+			width: 100%;
+			z-index: 200;
+
+			div {
+				background: none;
+				border: none;
+				color: @primary-white;
+				cursor: pointer;
+				flex: 0 1 auto;
+				outline: none;
+				pointer-events: none;
+				position: relative;
+				width: 10vw;
+
+				&::before {
+					.font-slick-largeicon;
+					opacity: 0.6;
+				}
+
+				&:hover::before{
+					opacity: 1;
+				}
+			}
+
+			.slick-prev::before {
+				pointer-events: auto;
+				position: absolute;
+				right: 1rem;
+				top: ~"calc(50% - 3rem)";
+			}
+
+			.slick-next::before {
+				left: 1rem;
+				pointer-events: auto;
+				position: absolute;
+				top: ~"calc(50% - 3rem)";
+			}
+		}
+	}
+}
+
+@media (min-width: @breakpoint-md) {
+	.banner {
+		.images {
+			.slick-slide {
+				width: ~"calc(76.8rem - 20vw)";
+			}
+		}
+
+		.images > div::before, .images > div::after, .buttons div {
+    		width: ~"calc((100vw - (76.8rem - 20vw)) / 2 - .85rem)";
+		}
+
+		.info {
+			left: ~"calc(50% - ((76.8rem - 20vw) / 2))";
+			width: ~"calc(76.8rem - 20vw + 0.1rem)";
+
+			h1, h2, p {
+				white-space: normal;
+			}
+
+			p {
+				display: block;
+				margin-top: 1rem;
+			}
+		}
+	}
+}
+
+@media (min-width: @breakpoint-lg) {
+	.banner {
+		.images {
+			.slick-slide {
+				width: ~"calc(102.4rem - 20vw)";
+			}
+		}
+
+		.images > div::before, .images > div::after, .buttons div {
+    		width: ~"calc((100vw - (102.4rem - 20vw)) / 2 - .85rem)";
+		}
+
+		.info {
+			left: ~"calc(50% - ((102.4rem - 20vw) / 2))";
+			width: ~"calc(102.4rem - 20vw + 0.1rem)";
+		}
+	}
+}
+
+@media (min-width: @breakpoint-xl) {
+	.banner {
+		.images {
+			.slick-slide {
+				width: 102.4rem;
+			}
+		}
+
+		.images > div::before, .images > div::after, .buttons div {
+    		width: ~"calc((100vw - 102.4rem) / 2 - .85rem)";
+		}
+
+		.info {
+			left: ~"calc(50% - (102.4rem / 2))";
+			width: ~"calc(102.4rem + 0.1rem)";
+		}
+	}
+}

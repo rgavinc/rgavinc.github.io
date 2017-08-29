@@ -1,0 +1,14 @@
+.shine(@color: rgba(255,255,255,.3)) {
+	&::before {
+		animation: shine .75s;
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, @color 100%);
+		content: "";
+		display: block;
+		height: 100%;
+		left: -75%;
+		position: absolute;
+		top: 0;
+		transform: skewX(-25deg);
+		width: 50%;
+	}
+}

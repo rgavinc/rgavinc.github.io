@@ -1,0 +1,66 @@
+@import (reference) url("../../../../variables/colors");
+@import (reference) url("../../../../variables/breakpoints");
+@import (reference) url("../../../../mixins/social-icons");
+@import (reference) url("../../../../mixins/fonts");
+
+#footer {
+	overflow: auto;
+}
+
+#footer-nav {
+	background-color: @primary-black;
+	padding: 2.5rem 5.7rem;
+	text-align: center;
+	
+	a {
+		.font-footer;
+		white-space: nowrap;
+		cursor: pointer;
+
+		&:hover, &:focus {
+			color: @primary-white;
+		}
+
+		&:not(:first-child) {
+			padding-left: 0.7rem;
+		}
+		
+		&:not(:last-child) {
+			padding-right: 0.7rem;
+			position: relative;
+			
+			&::after {
+				color: @primary-gray-light;
+				content: "|";
+				position: absolute;
+				right: -0.1rem;
+			}
+			
+		}
+	}
+}
+
+#mission, #copyright, #social {
+	.font-footer;
+	padding: 0 5.7rem;
+	text-align: center;
+}
+
+#mission, #copyright {
+	margin: 0 auto;
+	max-width: 64rem;
+}
+
+#mission {
+	margin-top: 3.2rem;
+}
+
+#copyright {
+	margin-top: 2.6rem;
+}
+
+#social {
+	margin: 3.2rem 2rem;
+	
+	.social-icons();
+}

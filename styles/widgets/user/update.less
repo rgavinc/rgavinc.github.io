@@ -1,0 +1,27 @@
+@import (reference) url("../../variables/colors");
+
+form.account.update {
+	.actions {
+		&::after {
+			clear: both;
+			content: "";
+			display: block;
+		}
+	}
+
+	button#sign-out {
+		background: @primary-gray-light;
+	}
+
+	a#delete {
+		color: @secondary-red;
+		margin-top: 2rem;
+	}
+
+	div.form.delete.vex.vex-theme-plain {
+		button.vex-dialog-button-secondary {
+			background-color: @secondary-red;
+			color: @primary-white;
+		}
+	}
+}

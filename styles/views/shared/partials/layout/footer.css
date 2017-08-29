@@ -1,0 +1,294 @@
+#footer {
+  overflow: auto;
+}
+#footer-nav {
+  background-color: #000000;
+  padding: 2.5rem 5.7rem;
+  text-align: center;
+}
+#footer-nav a {
+  color: #9B9B9B;
+  white-space: nowrap;
+  cursor: pointer;
+}
+#footer-nav a:hover,
+#footer-nav a:focus {
+  color: #FFFFFF;
+}
+#footer-nav a:not(:first-child) {
+  padding-left: 0.7rem;
+}
+#footer-nav a:not(:last-child) {
+  padding-right: 0.7rem;
+  position: relative;
+}
+#footer-nav a:not(:last-child)::after {
+  color: #9B9B9B;
+  content: "|";
+  position: absolute;
+  right: -0.1rem;
+}
+#mission,
+#copyright,
+#social {
+  color: #9B9B9B;
+  padding: 0 2rem;
+  text-align: center;
+}
+#mission,
+#copyright {
+  margin: 0 auto;
+  max-width: 64rem;
+}
+#mission {
+  margin-top: 3.2rem;
+}
+#copyright {
+  margin-top: 2.6rem;
+}
+#social {
+  margin: 3.2rem 0;
+}
+#social .facebook,
+#social .tumblr,
+#social .twitter,
+#social .youtube,
+#social .googleplus,
+#social .pinterest,
+#social .instagram,
+#social .byutv {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#social .facebook {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+#social .facebook .facebook-logo {
+  enable-background: new 0 0 266.8930969 266.8945923;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+#social .facebook .f-character {
+  fill: #FFFFFF;
+}
+#social .facebook .background {
+  fill: #3C5A99;
+}
+#social .instagram {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+#social .instagram .instagram-logo {
+  enable-background: new 0 0 512 512;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+#social .instagram .instagram-logo .st0 {
+  fill: #FFFFFF;
+}
+#social .tumblr {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+#social .tumblr .tumblr-logo {
+  enable-background: new 0 0 256 256;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+#social .tumblr .t-character {
+  fill: #FFFFFF;
+}
+#social .tumblr .background {
+  fill: #35465C;
+}
+#social .twitter {
+  height: 1.8rem;
+  width: 2.21165919rem;
+}
+#social .twitter .twitter-logo {
+  enable-background: new 0 0 273.3895874 222.1782074;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+#social .twitter .twitter-logo .bird {
+  fill: #FFFFFF;
+}
+#social .youtube {
+  height: 1.8rem;
+  width: 2.55644938rem;
+}
+#social .youtube .youtube-logo {
+  enable-background: new 0 0 1024 721;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+#social .youtube .play-icon {
+  fill: #FFFFFF;
+}
+#social .youtube .play-icon-glare {
+  opacity: 0.12;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #420000;
+}
+#social .youtube #bubble-gradient stop:nth-child(1) {
+  stop-color: #E52D27;
+}
+#social .youtube #bubble-gradient stop:nth-child(2) {
+  stop-color: #BF171D;
+}
+#social .googleplus {
+  height: 1.8rem;
+  width: 1.84090909rem;
+}
+#social .googleplus .googleplus-logo {
+  enable-background: new 0 0 134.658 131.646;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+#social .googleplus .g-character,
+#social .googleplus .plus-character {
+  fill: #FFFFFF;
+}
+#social .googleplus .background {
+  fill: #DD4B39;
+}
+#social .pinterest {
+  height: 1.8rem;
+  width: 1.78723404rem;
+}
+#social .pinterest .pinterest-logo {
+  enable-background: new 0 0 279.332489 281.3330078;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+#social .pinterest .p-character {
+  fill: #FFFFFF;
+}
+#social .pinterest .background {
+  fill: #BD081C;
+}
+#social .byutv {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+#social .byutv .byutv-logo {
+  enable-background: new 0 0 106.5942078 74;
+  /* IE ONLY */
+  height: inherit;
+  width: inherit;
+}
+#social .byutv .byu-text-background {
+  fill: #FFFFFF;
+}
+#social .byutv .oval-one {
+  opacity: 0.78;
+}
+#social .byutv .oval-two {
+  opacity: 0.6909;
+}
+#social .byutv .oval-three {
+  opacity: 0.11;
+  fill: #FFFFFF;
+}
+#social .byutv .oval-four {
+  opacity: 0.12;
+  fill: #FFFFFF;
+}
+#social .byutv #circle-byu-text-gradient stop:nth-child(1) {
+  stop-color: #29B0E6;
+}
+#social .byutv #circle-byu-text-gradient stop:nth-child(2) {
+  stop-color: #29B0E6;
+}
+#social .byutv #circle-byu-text-gradient stop:nth-child(3) {
+  stop-color: #2C82AE;
+}
+#social .byutv #circle-byu-text-gradient stop:nth-child(4) {
+  stop-color: #25577E;
+}
+#social .byutv #circle-byu-text-gradient stop:nth-child(5) {
+  stop-color: #14244B;
+}
+#social .byutv #circle-byu-text-gradient stop:nth-child(6) {
+  stop-color: #101540;
+}
+#social .byutv #tv-text-gradient stop:nth-child(1) {
+  stop-color: #29B0E6;
+}
+#social .byutv #tv-text-gradient stop:nth-child(2) {
+  stop-color: #2CA2D2;
+}
+#social .byutv #tv-text-gradient stop:nth-child(3) {
+  stop-color: #2D83AF;
+}
+#social .byutv #tv-text-gradient stop:nth-child(4) {
+  stop-color: #26587F;
+}
+#social .byutv #tv-text-gradient stop:nth-child(5) {
+  stop-color: #15254C;
+}
+#social .byutv #tv-text-gradient stop:nth-child(6) {
+  stop-color: #101540;
+}
+#social .byutv #moon-gradient stop,
+#social .byutv #oval-one-gradient stop,
+#social .byutv #oval-two-gradient stop {
+  stop-color: #FFFFFF;
+}
+#social .byutv #moon-gradient stop:nth-child(1) {
+  stop-opacity: 0.3;
+}
+#social .byutv #moon-gradient stop:nth-child(2) {
+  stop-opacity: 0.05;
+}
+#social .byutv #moon-gradient stop:nth-child(3) {
+  stop-opacity: 0;
+}
+#social .byutv #oval-one-gradient stop:nth-child(1) {
+  stop-opacity: 0.55;
+}
+#social .byutv #oval-one-gradient stop:nth-child(2) {
+  stop-opacity: 0.25;
+}
+#social .byutv #oval-one-gradient stop:nth-child(3) {
+  stop-opacity: 0.15;
+}
+#social .byutv #oval-one-gradient stop:nth-child(4) {
+  stop-opacity: 0;
+}
+#social .byutv #oval-two-gradient stop:nth-child(1) {
+  stop-opacity: 0.5;
+}
+#social .byutv #oval-two-gradient stop:nth-child(2) {
+  stop-opacity: 0;
+}
+#social a {
+  margin-top: 1rem;
+  transition: transform 300ms ease-in-out;
+}
+#social a:not(:last-child) {
+  margin-right: 1.8rem;
+}
+#social a:focus,
+#social a:hover {
+  transform: scale(1.15) translateZ(0) rotate(0.0001deg);
+}
+@media (min-width: 512px) {
+  #mission,
+  #copyright,
+  #social {
+    padding: 0 5.7rem;
+  }
+  #social {
+    margin: auto 2rem;
+  }
+}

@@ -1,0 +1,14 @@
+form.account.sign-in .actions::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+form.account.sign-in div span {
+  font-weight: 400;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}
+form.account.sign-in button + div,
+form.account.sign-in div + section {
+  margin-left: 2rem;
+}

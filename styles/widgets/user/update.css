@@ -1,0 +1,16 @@
+form.account.update .actions::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+form.account.update button#sign-out {
+  background: #9B9B9B;
+}
+form.account.update a#delete {
+  color: #bf000b;
+  margin-top: 2rem;
+}
+form.account.update div.form.delete.vex.vex-theme-plain button.vex-dialog-button-secondary {
+  background-color: #bf000b;
+  color: #FFFFFF;
+}

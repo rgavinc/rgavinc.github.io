@@ -1,0 +1,87 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/fonts");
+
+.document-page {
+	header {
+		background-color: @primary-gray-dark;
+		color: @primary-white;
+		padding: 1.5rem 2rem;
+	
+		h1 {
+			.font-document-title;
+			max-width: 64rem;
+			padding: 0 2rem;
+			margin: auto;	
+			text-align: center;
+		}
+	}
+
+	p {
+		color: @secondary-gray-dark;
+	}
+
+	.markdown-body {
+		font-family: "Nunito", sans-serif;
+		margin: 0 auto;
+		max-width: 64rem;
+		padding: 2rem;
+
+		img {
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	section > .iframe-wrapper {
+		padding-bottom: 89%;
+	}
+
+	.iframe-wrapper {
+		height: 0;
+		margin-bottom: 1.6rem;
+		padding-bottom: 56.25%;
+		position: relative;
+
+		> iframe {
+			border: none;
+			bottom: 0;
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100%;  
+		}
+	}
+
+	.buttons {
+		overflow: auto;
+		margin: auto;
+		max-width: 64rem;
+		padding: 0 2rem;
+		
+		a {
+			.font-document-link;
+			display: flex;	
+			margin: 2rem 0;
+			white-space: pre-wrap;
+				
+			&:hover {
+				color: @primary-black;
+			}
+		}
+
+		.prev {
+			float: right;
+		}
+
+		.next {
+			float: left;
+		}
+	}
+
+	div {
+		display: inline-block;
+	}
+}

@@ -1,0 +1,267 @@
+.social-icons(@base-size: 1.8rem, @twitter-blue: false, @instagram-black: false) {
+	.facebook, .tumblr, .twitter, .youtube, .googleplus, .pinterest, .instagram, .byutv {
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.facebook {
+		height: @base-size;
+		width: @base-size;
+		.facebook-logo {
+			enable-background: new 0 0 266.8930969 266.8945923;
+			/* IE ONLY */
+			height: inherit;
+			width: inherit;
+		}
+		
+		.f-character {
+			fill: #FFFFFF;
+		}
+		
+		.background {
+			fill: #3C5A99;
+		}
+	}
+
+	.instagram {
+		height: @base-size;
+		width: @base-size;
+
+		.instagram-logo {
+			enable-background: new 0 0 512 512;
+			/* IE ONLY */
+			height: inherit;
+			width: inherit;
+			
+			.st0 {
+				fill: #FFFFFF;
+			}
+		}
+	}
+
+	.instagram when (@instagram-black = true) {
+		.instagram-logo {
+			.st0 {
+				fill: #000000;
+			}
+		}
+	}
+
+	.tumblr {
+		height: @base-size;
+		width: @base-size;
+		.tumblr-logo {
+			enable-background: new 0 0 256 256;
+			/* IE ONLY */
+			height: inherit;
+			width: inherit;
+		}
+		
+		.t-character {
+			fill: #FFFFFF;
+		}
+		
+		.background {
+			fill: #35465C;
+		}
+	}
+
+	@twitter-base: (@base-size * 1.2286995515695);
+	.twitter {
+		height: (@twitter-base * 0.81386861313869);
+		width: @twitter-base;
+		.twitter-logo {
+			enable-background: new 0 0 273.3895874 222.1782074;
+			/* IE ONLY */
+			height: inherit;
+			width: inherit;
+			.bird {
+				fill: #FFFFFF;
+			}
+		}
+	}
+
+	.twitter when (@twitter-blue = true) {
+		.bird {
+			fill: #55ACEE;
+		}
+	}
+
+	@youtube-base: (@base-size* 1.4202496532594);
+	.youtube {
+		height: (@youtube-base * 0.7041015625);
+		width: @youtube-base;
+		.youtube-logo {
+			enable-background: new 0 0 1024 721;
+			/* IE ONLY */
+			height: inherit;
+			width: inherit;
+		}
+		
+		.play-icon {
+			fill: #FFFFFF;
+		}
+		
+		.play-icon-glare {
+			opacity: 0.12;
+			fill-rule: evenodd;
+			clip-rule: evenodd;
+			fill: #420000;
+		}
+		
+		#bubble-gradient stop:nth-child(1) {
+			stop-color: #E52D27;
+		}
+		
+		#bubble-gradient stop:nth-child(2) {
+			stop-color: #BF171D;
+		}
+	}
+
+	@googleplus-base: (@base-size * 1.0227272727273);
+	.googleplus {
+		height: (@googleplus-base * 0.97777777777778);
+		width: @googleplus-base;
+		.googleplus-logo {
+			enable-background: new 0 0 134.658 131.646;
+			/* IE ONLY */
+			height: inherit;
+			width: inherit;
+		}
+		
+		.g-character, .plus-character {
+			fill: #FFFFFF;
+		}
+		
+		.background {
+			fill: #DD4B39;
+		}
+	}
+
+	@pinterest-base: (@base-size * 0.99290780141844);
+	.pinterest {
+		height: (@pinterest-base * 1.0071428571429);
+		width: @pinterest-base;
+		.pinterest-logo {
+			enable-background: new 0 0 279.332489 281.3330078;
+			/* IE ONLY */
+			height: inherit;
+			width: inherit;
+		}
+		
+		.p-character {
+			fill: #FFFFFF;
+		}
+		
+		.background {
+			fill: #BD081C;
+		}
+	}
+
+	.byutv {
+		height: @base-size;
+		width: @base-size;
+		.byutv-logo {
+			enable-background: new 0 0 106.5942078 74;
+			/* IE ONLY */
+			height: inherit;
+			width: inherit;
+		}
+		.byu-text-background {
+			fill: #FFFFFF;
+		}
+		.oval-one {
+			opacity: 0.78;
+		}
+		.oval-two {
+			opacity: 0.6909;
+		}
+		.oval-three {
+			opacity: 0.11;
+			fill: #FFFFFF;
+		}
+		.oval-four {
+			opacity: 0.12;
+			fill: #FFFFFF;
+		}
+		#circle-byu-text-gradient stop:nth-child(1) {
+			stop-color: #29B0E6;
+		}
+		#circle-byu-text-gradient stop:nth-child(2) {
+			stop-color: #29B0E6;
+		}
+		#circle-byu-text-gradient stop:nth-child(3) {
+			stop-color: #2C82AE;
+		}
+		#circle-byu-text-gradient stop:nth-child(4) {
+			stop-color: #25577E;
+		}
+		#circle-byu-text-gradient stop:nth-child(5) {
+			stop-color: #14244B;
+		}
+		#circle-byu-text-gradient stop:nth-child(6) {
+			stop-color: #101540;
+		}
+		#tv-text-gradient stop:nth-child(1) {
+			stop-color: #29B0E6;
+		}
+		#tv-text-gradient stop:nth-child(2) {
+			stop-color: #2CA2D2;
+		}
+		#tv-text-gradient stop:nth-child(3) {
+			stop-color: #2D83AF;
+		}
+		#tv-text-gradient stop:nth-child(4) {
+			stop-color: #26587F;
+		}
+		#tv-text-gradient stop:nth-child(5) {
+			stop-color: #15254C;
+		}
+		#tv-text-gradient stop:nth-child(6) {
+			stop-color: #101540;
+		}
+		#moon-gradient stop, #oval-one-gradient stop, #oval-two-gradient stop {
+			stop-color: #FFFFFF;
+		}
+		#moon-gradient stop:nth-child(1) {
+			stop-opacity: 0.3;
+		}
+		#moon-gradient stop:nth-child(2) {
+			stop-opacity: 0.05;
+		}
+		#moon-gradient stop:nth-child(3) {
+			stop-opacity: 0;
+		}
+		#oval-one-gradient stop:nth-child(1) {
+			stop-opacity: 0.55;
+		}
+		#oval-one-gradient stop:nth-child(2) {
+			stop-opacity: 0.25;
+		}
+		#oval-one-gradient stop:nth-child(3) {
+			stop-opacity: 0.15;
+		}
+		#oval-one-gradient stop:nth-child(4) {
+			stop-opacity: 0;
+		}
+		#oval-two-gradient stop:nth-child(1) {
+			stop-opacity: 0.5;
+		}
+		#oval-two-gradient stop:nth-child(2) {
+			stop-opacity: 0;
+		}
+	}
+
+	a {
+		margin-top: 1rem;
+		transition: transform 300ms ease-in-out;
+		
+		&:not(:last-child) {
+			margin-right: 1.8rem;
+		}
+
+		&:focus, &:hover {
+			transform: scale(1.15) translateZ(0) rotate(0.0001deg);
+		}
+	}
+}

@@ -1,0 +1,307 @@
+form.account {
+  background-color: #EAEAEA;
+}
+form.account .loading {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1.5em #FFFFFF;
+  font-size: 1px;
+  height: 18em;
+  width: 18em;
+  display: inline-block;
+  transition: margin-left 300ms;
+  margin-left: 1rem;
+  bottom: 1.5rem;
+  margin-bottom: -1.8rem;
+  position: relative;
+  z-index: 100;
+}
+form.account .loading::before,
+form.account .loading::after {
+  background: #008DDF;
+  content: "";
+  height: 20em;
+  position: absolute;
+  width: 11em;
+}
+form.account .loading::before {
+  animation: rotate 1s infinite ease 0.75s;
+  border-radius: 20em 0 0 20em;
+  left: -1em;
+  top: -1em;
+  transform-origin: 10em 10em;
+}
+form.account .loading::after {
+  animation: rotate 1s infinite ease;
+  border-radius: 0 20em 20em 0;
+  left: 10em;
+  top: -1em;
+  transform-origin: 0 10em;
+}
+form.account fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+form.account fieldset section.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+form.account fieldset section.main-content > section {
+  min-width: 90vw;
+  padding: 0 2rem 2rem 2rem;
+  margin: 0;
+}
+form.account fieldset section.main-content section.info {
+  padding-bottom: 0;
+}
+form.account fieldset section.main-content .big-button {
+  min-height: 3.5rem;
+  min-width: 20rem;
+}
+form.account fieldset section.main-content .big-button + p {
+  font-size: 1.3rem;
+  width: 20rem;
+  margin-top: 0.3em;
+  text-align: center;
+}
+form.account fieldset section.main-content ul li {
+  font-size: 1.7rem;
+  padding: .5rem 0;
+}
+form.account fieldset section.main-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 512px) {
+  form.account fieldset section.main-content section.info {
+    max-width: 40rem;
+    margin-top: 2rem;
+  }
+  form.account fieldset section.main-content > section {
+    min-width: 44rem;
+  }
+}
+@media (min-width: 768px) {
+  form.account fieldset section.main-content > section {
+    margin: 0 5rem;
+  }
+}
+form.account legend {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 500;
+  background: #4A4A4A;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+form.account .message {
+  max-width: 40rem;
+}
+form.account .success,
+form.account .error {
+  margin-top: 2rem;
+  padding-right: 4.5rem;
+  position: relative;
+}
+form.account .success h1,
+form.account .error h1 {
+  display: none;
+}
+form.account .success::after,
+form.account .error::after {
+  font-size: 1.6rem;
+  display: block;
+  font-family: "byutv3org";
+  position: absolute;
+  right: 1.5rem;
+  top: calc(50% - 1rem);
+}
+form.account .success {
+  background-color: #f4fbe9;
+  border: 0.1rem solid #42730d;
+  color: #42730d;
+}
+form.account .success::after {
+  content: "\e91e";
+}
+form.account .error {
+  background-color: #ffeded;
+  border: 0.1rem solid #bf000b;
+  color: #bf000b;
+}
+form.account .error::after {
+  content: "\e900";
+}
+form.account label {
+  font-size: 1.5rem;
+  display: block;
+  max-width: 40rem;
+  margin: 2rem 0 0.2rem 0;
+}
+form.account input[type="checkbox"] + label {
+  display: inline-block;
+  margin: 2rem 0 0 2rem;
+  width: calc(100% - 4.2rem);
+}
+form.account input {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  font-family: "Nunito", sans-serif;
+  padding: 0.8rem;
+  position: relative;
+}
+form.account input.valid {
+  box-shadow: inset 0 0 0.5rem #42730d;
+}
+form.account input.invalid {
+  box-shadow: inset 0 0 0.5rem #bf000b;
+}
+form.account input.valid + .is-valid::after {
+  font-size: 1.6rem;
+  color: #42730d;
+  content: "\e91e";
+  display: block;
+  font-family: "byutv3org";
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 1rem);
+}
+form.account input.invalid + .is-valid::after {
+  font-size: 1.6rem;
+  color: #bf000b;
+  content: "\e900";
+  display: block;
+  font-family: "byutv3org";
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 1rem);
+}
+form.account .input {
+  max-width: 40rem;
+  position: relative;
+}
+form.account input:not([type="checkbox"]) {
+  padding-right: 4.5rem;
+  width: 100%;
+}
+form.account input[type="checkbox"] {
+  margin: 2.5rem 0 0 0;
+  vertical-align: top;
+}
+form.account .input + p {
+  font-size: 1.3rem;
+  max-width: 40rem;
+  margin: 0.5rem 0 0 0.2rem;
+}
+form.account section label.show-password {
+  margin-top: 2.5rem;
+  margin-left: 1rem;
+}
+form.account .required::before {
+  color: #FF0000;
+  content: "*";
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: sub;
+}
+form.account input[type="checkbox"].required,
+form.account input[type="checkbox"].subscription {
+  position: relative;
+  left: 2rem;
+}
+form.account input[type="checkbox"].required:before {
+  margin-right: 0;
+  position: relative;
+  right: 1.9rem;
+  vertical-align: initial;
+}
+form.account input[type="checkbox"].required + label,
+form.account input[type="checkbox"].subscription + label {
+  margin-left: 4rem;
+  max-width: 34.8rem;
+  width: calc(100% - 5.3rem);
+}
+form.account p.required {
+  margin-top: 2rem;
+}
+form.account button {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #008DDF;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: block;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: 0.5rem 1.1rem;
+  position: relative;
+  text-transform: uppercase;
+}
+form.account button:hover::before,
+form.account button:focus::before {
+  animation: shine .75s;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 50%;
+}
+form.account a {
+  color: #008DDF;
+}
+form.account a:hover {
+  text-decoration: underline;
+}
+div.form.account.vex.vex-theme-plain div.vex-dialog-message {
+  color: #000000;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+}
+div.form.account.vex.vex-theme-plain button.vex-dialog-button {
+  color: #FFFFFF;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #008DDF;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: block;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: 0.5rem 1.1rem;
+  position: relative;
+  text-transform: uppercase;
+}
+div.form.account.vex.vex-theme-plain button.vex-dialog-button:hover,
+div.form.account.vex.vex-theme-plain button.vex-dialog-button:focus {
+  animation: none;
+}
+div.form.account.vex.vex-theme-plain button.vex-dialog-button:hover::before,
+div.form.account.vex.vex-theme-plain button.vex-dialog-button:focus::before {
+  animation: shine .75s;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 50%;
+}
+div.form.account.vex.vex-theme-plain button.vex-dialog-button-secondary {
+  background-color: #bf000b;
+  color: #FFFFFF;
+}

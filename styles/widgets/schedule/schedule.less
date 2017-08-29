@@ -1,0 +1,328 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/multiline-ellipsis");
+@import (reference) url("../../mixins/loader");
+@import (reference) url("../../mixins/shine");
+@import (reference) url("../../mixins/fonts");
+@import (reference) url("../../keyframes/keyframes");
+
+.schedule.fc {
+	max-width: 100%;
+	overflow-x: hidden;
+	background: @primary-black;
+
+	&.loading {
+		position: relative;
+		min-height: 25rem;
+
+		.schedule-loader {
+			.loader(@size: 100, @thickness: 7, @color: @primary-white, @background-color: @primary-black, @speed: 1.75);
+			left: 0;
+			margin: 0 auto;
+			position: absolute;
+			right: 0;
+			top: 10rem;
+		}
+
+		.fc-body {
+			visibility: hidden;
+		}
+	}
+
+	.fc-scroller {
+		width: 200%;
+
+		.fc-day-grid {
+			max-width: 100vw;
+		}
+	}
+
+	.fc-view-container *, .fc-view-container *::before, .fc-view-container *::after {
+		box-sizing: border-box;
+	}	
+
+	.fc-event-container {
+		display: block;
+	}
+
+	.hidden, .fc-day, .fc-content-skeleton td:not(.fc-event-container) {
+		display: none;
+	}
+
+	.fc-row .fc-content-skeleton {
+		padding: 0;
+
+			tr:nth-child(2n) {
+				background: @primary-black-light;
+
+				p::after {
+					background: @primary-black-light;
+				}
+			}
+	}
+
+	.today .prev + th.fc-day-header, .today .fc-day-header:first-child {
+		background-color: @primary-red;
+		color: @primary-white;
+	}
+
+	th, td {
+		border: none;
+	}
+
+	th.fc-day-header {
+		.font-schedule-day;
+		background-color: @primary-white;
+		padding: 1.5rem 0;
+		pointer-events: none;
+		position: relative;
+
+		&::before, &::after {
+			content: "";
+			height: 100%;
+			position: absolute;
+			top: 0;
+			width: 0.5rem;
+		}
+
+		&::before {
+			box-shadow: inset -0.5rem 0 0.8rem -0.5rem rgba(0,0,0,0.15);
+			left: -0.5rem;
+		}
+
+		&::after {
+			box-shadow: inset 0.5rem 0 0.8rem -0.5rem rgba(0,0,0,0.15);
+			right: -0.5rem;
+		}
+
+		&::first-line {
+			.font-schedule-firstline;
+		}
+
+		&.clickable {
+			background-color: @primary-black-light;
+			color: @primary-white;
+			pointer-events: all;
+			cursor: pointer;
+			&::after, &::before {
+				box-shadow: none;	
+			}		
+			// These styles stick to the area that was clicked in ios until the user touches another part of the page again, possibly because of sticky hover effects
+			// http://stackoverflow.com/questions/17233804/how-to-prevent-sticky-hover-effects-for-buttons-on-touch-devices
+			&:hover {
+				background-color: @primary-white;
+				color: @secondary-gray-dark;
+			}
+		}
+	}
+
+	.prev-next-button {
+		.font-schedule-icon;
+		background-color: @primary-black-light;
+		cursor: pointer;
+		vertical-align: middle;
+		width: 3rem;
+	}
+
+	tr.today > .prev.prev-next-button {
+		cursor: default;
+		&::before {
+			content: "";
+		}
+	}
+
+	tr:not(.today) > .prev.prev-next-button:hover , .next.prev-next-button:hover{
+		background-color: @primary-white;
+		color: @secondary-gray-dark;
+	}
+	
+	.fc-event-container .on-air {
+		overflow: hidden;
+		height: 16.375rem;
+	}
+
+	.fc-event-container .to-remove {
+		-webkit-transition: all 600ms ease;
+		transition: all 600ms ease;
+	}
+
+	.fc-event-container > section {
+		align-items: center;
+		display: flex;
+		padding: 2rem;
+
+		> a {
+			flex: 0 0 auto;
+			position: relative;
+
+			&:hover {
+				img {
+					transform: scale3d(1.05,1.05,1);
+				}
+		
+				figure::before {
+					background: rgba(0, 0, 0, 0.7);
+					border-color: #ffffff;
+				}
+			}
+		}
+
+		> div {
+			flex: 0 0 auto;
+			position: relative;
+		}
+	}
+
+	time {
+		.font-schedule-time;
+		flex: 0 1 auto;
+		margin-right: 2rem;
+		min-width: 5rem;
+		text-align: right;
+
+		span {
+			display: block;
+		}
+	}
+
+	
+
+	img {
+		display: none;
+		transition: opacity 1s,transform .5s;
+		width: 22rem;
+	}
+
+	label {
+		.font-schedule-label;
+		background-color: @primary-blue;
+		box-shadow: 0.1rem 0.1rem 0.5rem @primary-black;
+		cursor: pointer;
+		left: -0.3rem;
+		overflow: hidden;
+		padding: 0.5rem;
+		position: absolute;
+		text-transform: uppercase;
+		top: 0.4rem;
+		z-index: 100;
+		display: none;
+
+		&.now {
+			background-color: @primary-red;
+		}
+
+		&.now:hover, &.next:hover {
+			.shine();
+		}
+	}
+
+	.titles {
+		flex: 0 1 auto;
+		margin-left: 2rem;
+		overflow: hidden;
+
+		label {
+			border-radius: 0.5rem;
+			box-shadow: none;
+			display: none;
+			left: auto;
+			margin-bottom: 1rem;
+			padding: 0.5rem 1.1rem;
+			position: relative;
+			top: auto;
+		}
+
+		a, div {
+			.font-schedule-title;
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		a:nth-of-type(2), div:nth-of-type(2) {
+			.font-schedule-subtitle;
+			margin-top: 1rem;
+		}
+
+		p {
+			.font-schedule-description;
+			margin-top: 1rem;
+
+  			.multiLine-ellipsis();  
+			padding-right: 2rem;
+		}
+	}
+
+	.fc-threeDay-view {
+		p {
+			display: none;
+		}
+
+		.has-tag time {
+			margin-top: 3.4rem;
+		}
+
+		.titles label {
+			display: inline-block;
+		}
+
+		.fc-event-container > section > a label {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: @breakpoint-sm) {
+	.schedule.fc {
+		label {
+			margin: 2rem;
+			display: inline-block
+		}
+		img {
+			display: block;
+		}
+
+		.fc-event-container > section {
+			padding: 0;	
+
+			.target {
+				padding: 2rem;
+			}
+
+			time {
+				margin-left: 2rem;
+			}
+		}
+
+		a figure {
+		overflow: hidden;
+		&::before, &::after {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 100;
+			transform: scale3d(1, 1, 1);
+		}
+
+		&::before {
+			background: rgba(0,0,0,0.3);
+			border: 0.2rem solid rgba(255,255,255,0.8);
+			border-radius: 100%;
+			height: 5rem;
+			left: ~"calc(50% - 2.5rem)";
+			top: ~"calc(50% - 2.5rem)";
+			width: 5rem;
+		}
+
+		&::after {
+			border-color: transparent transparent transparent rgba(255,255,255,0.6);
+			border-style: solid;
+			border-width: 1rem 0 1rem 1.5rem;
+			left: ~"calc(50% - 0.75rem)";
+			margin-left: 0.2rem;
+			top: ~"calc(50% - 1rem)";
+		}
+	}
+	}
+}

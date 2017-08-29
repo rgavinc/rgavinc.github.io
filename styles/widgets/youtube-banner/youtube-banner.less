@@ -1,0 +1,92 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+@import (reference) url("../../mixins/multiline-ellipsis");
+
+.youtube-banner {
+	overflow: hidden;
+
+.youtube-wrapper {
+	overflow: hidden;
+}
+
+  .youtube-wrapper > section {
+    padding-bottom: 56.25%;
+    height: 0;
+    position: relative;
+  
+    iframe {
+      border: none;
+      bottom: 0;
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  	h1, h2 {
+		position: static;
+	}
+
+	h1 {
+		padding-top: 2rem;
+	}
+
+	h2 {
+		margin-top: 0.5rem;
+	}
+
+	p {
+		margin-top: 1rem;
+	}
+
+	.youtube-gradient {
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		pointer-events: none;
+		background: linear-gradient(to right, #000000 0, transparent 20vw), linear-gradient(to left, #000000 0, transparent 20vw), linear-gradient(to top, #000000 0, transparent 10rem);
+		z-index: 999;
+	}
+}
+
+@media (min-width: @breakpoint-md) {
+	.youtube-banner {
+		align-items: center;
+		background: @primary-black;
+		display: flex;
+		flex-direction: column-reverse;
+
+		.youtube-wrapper {
+			order: 1;
+			max-width: 100%;
+
+			> section {
+				width: 124vh;
+				max-width: 100%;
+			}
+		}
+
+		.branding-bar {
+			background: @primary-black;
+			position: relative;
+			width: 80vw;
+		}
+	}
+}
+
+@media (min-width: @breakpoint-xl) {
+	.youtube-banner {
+		justify-content: center;
+
+		.branding-bar {
+			padding-right: 6rem;
+		}
+	}
+}

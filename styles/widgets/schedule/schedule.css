@@ -1,0 +1,344 @@
+.schedule.fc {
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #000000;
+}
+.schedule.fc.loading {
+  position: relative;
+  min-height: 25rem;
+}
+.schedule.fc.loading .schedule-loader {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 7em #FFFFFF;
+  font-size: 1px;
+  height: 100em;
+  position: relative;
+  width: 100em;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 10rem;
+}
+.schedule.fc.loading .schedule-loader::before,
+.schedule.fc.loading .schedule-loader::after {
+  background: #000000;
+  content: "";
+  height: 102em;
+  position: absolute;
+  width: 52em;
+}
+.schedule.fc.loading .schedule-loader::before {
+  animation: rotate 1.75s infinite ease 1.3125s;
+  border-radius: 102em 0 0 102em;
+  left: -1em;
+  top: -1em;
+  transform-origin: 51em 51em;
+}
+.schedule.fc.loading .schedule-loader::after {
+  animation: rotate 1.75s infinite ease;
+  border-radius: 0 102em 102em 0;
+  left: 51em;
+  top: -1em;
+  transform-origin: 0 51em;
+}
+.schedule.fc.loading .fc-body {
+  visibility: hidden;
+}
+.schedule.fc .fc-scroller {
+  width: 200%;
+}
+.schedule.fc .fc-scroller .fc-day-grid {
+  max-width: 100vw;
+}
+.schedule.fc .fc-view-container *,
+.schedule.fc .fc-view-container *::before,
+.schedule.fc .fc-view-container *::after {
+  box-sizing: border-box;
+}
+.schedule.fc .fc-event-container {
+  display: block;
+}
+.schedule.fc .hidden,
+.schedule.fc .fc-day,
+.schedule.fc .fc-content-skeleton td:not(.fc-event-container) {
+  display: none;
+}
+.schedule.fc .fc-row .fc-content-skeleton {
+  padding: 0;
+}
+.schedule.fc .fc-row .fc-content-skeleton tr:nth-child(2n) {
+  background: #131313;
+}
+.schedule.fc .fc-row .fc-content-skeleton tr:nth-child(2n) p::after {
+  background: #131313;
+}
+.schedule.fc .today .prev + th.fc-day-header,
+.schedule.fc .today .fc-day-header:first-child {
+  background-color: #FF0000;
+  color: #FFFFFF;
+}
+.schedule.fc th,
+.schedule.fc td {
+  border: none;
+}
+.schedule.fc th.fc-day-header {
+  color: #646464;
+  font-size: 1.8rem;
+  background-color: #FFFFFF;
+  padding: 1.5rem 0;
+  pointer-events: none;
+  position: relative;
+}
+.schedule.fc th.fc-day-header::before,
+.schedule.fc th.fc-day-header::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 0.5rem;
+}
+.schedule.fc th.fc-day-header::before {
+  box-shadow: inset -0.5rem 0 0.8rem -0.5rem rgba(0, 0, 0, 0.15);
+  left: -0.5rem;
+}
+.schedule.fc th.fc-day-header::after {
+  box-shadow: inset 0.5rem 0 0.8rem -0.5rem rgba(0, 0, 0, 0.15);
+  right: -0.5rem;
+}
+.schedule.fc th.fc-day-header::first-line {
+  font-size: 2.2rem;
+}
+.schedule.fc th.fc-day-header.clickable {
+  background-color: #131313;
+  color: #FFFFFF;
+  pointer-events: all;
+  cursor: pointer;
+}
+.schedule.fc th.fc-day-header.clickable::after,
+.schedule.fc th.fc-day-header.clickable::before {
+  box-shadow: none;
+}
+.schedule.fc th.fc-day-header.clickable:hover {
+  background-color: #FFFFFF;
+  color: #646464;
+}
+.schedule.fc .prev-next-button {
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 1.8rem;
+  background-color: #131313;
+  cursor: pointer;
+  vertical-align: middle;
+  width: 3rem;
+}
+.schedule.fc tr.today > .prev.prev-next-button {
+  cursor: default;
+}
+.schedule.fc tr.today > .prev.prev-next-button::before {
+  content: "";
+}
+.schedule.fc tr:not(.today) > .prev.prev-next-button:hover,
+.schedule.fc .next.prev-next-button:hover {
+  background-color: #FFFFFF;
+  color: #646464;
+}
+.schedule.fc .fc-event-container .on-air {
+  overflow: hidden;
+  height: 16.375rem;
+}
+.schedule.fc .fc-event-container .to-remove {
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+.schedule.fc .fc-event-container > section {
+  align-items: center;
+  display: flex;
+  padding: 2rem;
+}
+.schedule.fc .fc-event-container > section > a {
+  flex: 0 0 auto;
+  position: relative;
+}
+.schedule.fc .fc-event-container > section > a:hover img {
+  transform: scale3d(1.05, 1.05, 1);
+}
+.schedule.fc .fc-event-container > section > a:hover figure::before {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: #ffffff;
+}
+.schedule.fc .fc-event-container > section > div {
+  flex: 0 0 auto;
+  position: relative;
+}
+.schedule.fc time {
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 1.8rem;
+  flex: 0 1 auto;
+  margin-right: 2rem;
+  min-width: 5rem;
+  text-align: right;
+}
+.schedule.fc time span {
+  display: block;
+}
+.schedule.fc img {
+  display: none;
+  transition: opacity 1s,transform .5s;
+  width: 22rem;
+}
+.schedule.fc label {
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #008DDF;
+  box-shadow: 0.1rem 0.1rem 0.5rem #000000;
+  cursor: pointer;
+  left: -0.3rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0.4rem;
+  z-index: 100;
+  display: none;
+}
+.schedule.fc label.now {
+  background-color: #FF0000;
+}
+.schedule.fc label.now:hover::before,
+.schedule.fc label.next:hover::before {
+  animation: shine .75s;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 50%;
+}
+.schedule.fc .titles {
+  flex: 0 1 auto;
+  margin-left: 2rem;
+  overflow: hidden;
+}
+.schedule.fc .titles label {
+  border-radius: 0.5rem;
+  box-shadow: none;
+  display: none;
+  left: auto;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.1rem;
+  position: relative;
+  top: auto;
+}
+.schedule.fc .titles a,
+.schedule.fc .titles div {
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  font-weight: 300;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.schedule.fc .titles a:nth-of-type(2),
+.schedule.fc .titles div:nth-of-type(2) {
+  color: #9B9B9B;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+.schedule.fc .titles p {
+  color: #9B9B9B;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  hyphens: auto;
+  line-height: 2.2rem;
+  max-height: 6.6rem;
+  overflow: hidden;
+  padding-right: 1em;
+  position: relative;
+  padding-right: 2rem;
+}
+.schedule.fc .titles p::before,
+.schedule.fc .titles p::after {
+  line-height: 2.2rem;
+}
+.schedule.fc .titles p::before {
+  bottom: 0;
+  content: "\02026";
+  position: absolute;
+  right: 0.5rem;
+}
+.schedule.fc .titles p::after {
+  background: #000000;
+  content: "";
+  height: 1em;
+  margin-top: 0.3em;
+  position: absolute;
+  right: 0;
+  width: 1em;
+}
+.schedule.fc .fc-threeDay-view p {
+  display: none;
+}
+.schedule.fc .fc-threeDay-view .has-tag time {
+  margin-top: 3.4rem;
+}
+.schedule.fc .fc-threeDay-view .titles label {
+  display: inline-block;
+}
+.schedule.fc .fc-threeDay-view .fc-event-container > section > a label {
+  display: none;
+}
+@media (min-width: 512px) {
+  .schedule.fc label {
+    margin: 2rem;
+    display: inline-block;
+  }
+  .schedule.fc img {
+    display: block;
+  }
+  .schedule.fc .fc-event-container > section {
+    padding: 0;
+  }
+  .schedule.fc .fc-event-container > section .target {
+    padding: 2rem;
+  }
+  .schedule.fc .fc-event-container > section time {
+    margin-left: 2rem;
+  }
+  .schedule.fc a figure {
+    overflow: hidden;
+  }
+  .schedule.fc a figure::before,
+  .schedule.fc a figure::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 100;
+    transform: scale3d(1, 1, 1);
+  }
+  .schedule.fc a figure::before {
+    background: rgba(0, 0, 0, 0.3);
+    border: 0.2rem solid rgba(255, 255, 255, 0.8);
+    border-radius: 100%;
+    height: 5rem;
+    left: calc(50% - 2.5rem);
+    top: calc(50% - 2.5rem);
+    width: 5rem;
+  }
+  .schedule.fc a figure::after {
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.6);
+    border-style: solid;
+    border-width: 1rem 0 1rem 1.5rem;
+    left: calc(50% - 0.75rem);
+    margin-left: 0.2rem;
+    top: calc(50% - 1rem);
+  }
+}

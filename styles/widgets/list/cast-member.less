@@ -1,0 +1,21 @@
+@import (reference) url("../../variables/breakpoints");
+
+@media (min-width: @breakpoint-sm) {
+	body:not(.grid-layout) .list.cast {
+		&.hero .slick-slide {
+			&:not(:first-child) > div {
+				height: 20.5rem;
+				width: 20.5rem;
+
+				+ div {
+					margin-top: 1rem;
+				}
+			}
+
+			&:first-child {
+				height: 42rem;
+				width: 43rem;
+			}
+		}
+	}
+}

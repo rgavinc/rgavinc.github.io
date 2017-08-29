@@ -1,0 +1,189 @@
+.list {
+  overflow: hidden;
+}
+.list.hidden {
+  height: 0;
+}
+.list .slick-list {
+  margin: 0 2.7rem;
+  overflow: visible;
+}
+.list .slick-prev,
+.list .slick-next {
+  color: #9B9B9B;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  position: absolute;
+  top: 0;
+  width: 4.7rem;
+}
+.list .slick-prev::before,
+.list .slick-next::before {
+  flex: 0 1 auto;
+  position: relative;
+}
+.list .slick-prev:not(.slick-disabled):hover,
+.list .slick-next:not(.slick-disabled):hover,
+.list .slick-prev:not(.slick-disabled):focus,
+.list .slick-next:not(.slick-disabled):focus {
+  color: #FFFFFF;
+}
+.list .slick-prev {
+  left: 0;
+}
+.list .slick-prev::before {
+  left: 0.9rem;
+}
+.list .slick-next {
+  right: 0;
+}
+.list .slick-disabled {
+  color: transparent;
+  cursor: default;
+}
+.list .slick-slide {
+  outline: none;
+  margin: 0 0.5rem;
+}
+.list a {
+  display: block !important;
+  position: relative;
+}
+.list a:hover img {
+  transform: scale3d(1.05, 1.05, 1);
+}
+.list a.now,
+.list a.next {
+  bottom: 2rem;
+}
+.list a.now label {
+  background-color: #FF0000;
+}
+.list a.next label {
+  background-color: #008DDF;
+}
+.list figure {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.list img {
+  transition: transform .5s;
+  width: 100%;
+}
+.list label {
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0.1rem 0.1rem 0.5rem #000000;
+  cursor: pointer;
+  left: -0.3rem;
+  padding: 0.5rem;
+  position: relative;
+  text-transform: uppercase;
+  top: 2.2rem;
+  z-index: 100;
+  transform: scale3d(1, 1, 1);
+}
+.list .titles {
+  color: #FFFFFF;
+  position: relative;
+  text-shadow: 0 0.1rem 0.1rem #000000;
+  width: 100%;
+  z-index: 200;
+}
+.list .titles::before {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  content: "";
+  display: block;
+  height: 4rem;
+  left: 0;
+  position: absolute;
+  top: -3.9rem;
+  width: 100%;
+  transform: scale3d(1, 1, 1);
+  z-index: -100;
+}
+.list h1,
+.list h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list h1 {
+  color: #9B9B9B;
+  margin-top: 0.5rem;
+}
+.list h2 {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+}
+.list.stack .slick-slide div + div {
+  margin-top: 1rem;
+}
+.grid-layout .list {
+  margin: 1rem 3.7rem 2rem 3.7rem;
+  overflow: hidden;
+}
+.grid-layout .list a {
+  display: block;
+}
+.grid-layout .list a + a {
+  margin-top: 1rem;
+}
+@media (min-width: 512px) {
+  .list .slick-list,
+  .hero.list .slick-list {
+    margin: 0 4.7rem;
+    overflow: hidden;
+  }
+  .list.hero .slick-slide > div:first-child a[data-list-index="0"],
+  .hero.list.hero .slick-slide > div:first-child a[data-list-index="0"] {
+    width: 45rem !important;
+  }
+  .list.hero .slick-slide > div:first-child a[data-list-index="0"] h2,
+  .hero.list.hero .slick-slide > div:first-child a[data-list-index="0"] h2 {
+    font-size: 3.3rem;
+    font-weight: 100;
+  }
+  .list.hero .slick-slide > div:first-child a[data-list-index="0"] h1,
+  .hero.list.hero .slick-slide > div:first-child a[data-list-index="0"] h1 {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  .list.hero .slick-slide > div:first-child a[data-list-index="0"] figure,
+  .hero.list.hero .slick-slide > div:first-child a[data-list-index="0"] figure {
+    height: 25.4rem;
+  }
+  .list.hero .slick-slide > div a:not([data-list-index="0"]),
+  .hero.list.hero .slick-slide > div a:not([data-list-index="0"]) {
+    width: 19.2rem !important;
+  }
+  .list.hero .slick-slide > div div:empty,
+  .hero.list.hero .slick-slide > div div:empty {
+    display: none !important;
+  }
+  .list.hero .slick-slide > div:last-child a:not([data-list-index="0"]),
+  .hero.list.hero .slick-slide > div:last-child a:not([data-list-index="0"]) {
+    margin-top: 2rem;
+  }
+  .grid-layout .list {
+    margin: 1rem 5.2rem 2rem 5.2rem;
+  }
+  .grid-layout .list a + a {
+    margin-top: 0;
+  }
+  .grid-layout .list > a:not([style]),
+  .grid-layout .list > section:not([style]),
+  .grid-layout .list > div:not([style]) {
+    height: 0;
+    width: 0;
+  }
+}

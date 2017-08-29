@@ -1,0 +1,71 @@
+.document-page header {
+  background-color: #4A4A4A;
+  color: #FFFFFF;
+  padding: 1.5rem 2rem;
+}
+.document-page header h1 {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 300;
+  max-width: 64rem;
+  padding: 0 2rem;
+  margin: auto;
+  text-align: center;
+}
+.document-page p {
+  color: #646464;
+}
+.document-page .markdown-body {
+  font-family: "Nunito", sans-serif;
+  margin: 0 auto;
+  max-width: 64rem;
+  padding: 2rem;
+}
+.document-page .markdown-body img {
+  margin-bottom: 1.6rem;
+}
+.document-page section > .iframe-wrapper {
+  padding-bottom: 89%;
+}
+.document-page .iframe-wrapper {
+  height: 0;
+  margin-bottom: 1.6rem;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.document-page .iframe-wrapper > iframe {
+  border: none;
+  bottom: 0;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.document-page .buttons {
+  overflow: auto;
+  margin: auto;
+  max-width: 64rem;
+  padding: 0 2rem;
+}
+.document-page .buttons a {
+  color: #646464;
+  font-size: 1.6rem;
+  display: flex;
+  margin: 2rem 0;
+  white-space: pre-wrap;
+}
+.document-page .buttons a:hover {
+  color: #000000;
+}
+.document-page .buttons .prev {
+  float: right;
+}
+.document-page .buttons .next {
+  float: left;
+}
+.document-page div {
+  display: inline-block;
+}

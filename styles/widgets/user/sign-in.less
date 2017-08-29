@@ -1,0 +1,25 @@
+@import (reference) url("../../variables/colors");
+@import (reference) url("../../variables/breakpoints");
+
+form.account.sign-in {
+	.actions {
+		&::after {
+			clear: both;
+			content: "";
+			display: block;
+		}
+	}
+
+	div {
+
+		span {
+			font-weight: 400;
+			margin: 0 0.5rem;
+			vertical-align: middle;
+		}
+	}
+
+	button + div, div + section {
+		margin-left: 2rem;
+	}
+}
