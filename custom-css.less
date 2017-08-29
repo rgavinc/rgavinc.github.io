@@ -1,6 +1,8 @@
-@import (reference) url("colors");
+@import (reference) url("../../../variables/colors");
+@import (reference) url("../../../mixins/fonts");
 
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: normal;
@@ -9,7 +11,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: normal;
@@ -20,6 +24,7 @@
 
 
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: normal;
@@ -28,7 +33,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: normal;
@@ -37,7 +44,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: normal;
@@ -46,7 +55,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: normal;
@@ -55,7 +66,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: normal;
@@ -64,7 +77,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: italic;
@@ -73,7 +88,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: italic;
@@ -82,7 +99,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: italic;
@@ -91,7 +110,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: italic;
@@ -100,7 +121,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: italic;
@@ -109,7 +132,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: italic;
@@ -118,7 +143,9 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
 /* latin */
+
 @font-face {
 	font-family: "Nunito";
 	font-style: italic;
@@ -142,9 +169,7 @@ html {
 }
 
 body {
-	font-family: "Nunito", sans-serif;
-	font-size: 1.3rem;
-	font-weight: 300;
+	.font-tint-default;
 	background-color: transparent;
 	display: block;
 	font-smoothing: antialiased;
@@ -167,8 +192,7 @@ body {
 }
 
 .hypeTemplate .post-title p::first-line, .hypeTemplate.text-only .post-title p::first-line, .hypeTemplate.text-only .post-title p, .post .post-title {
-	font-size: 1.8rem;
-	font-weight: 100;
+	.font-tint-primary;
 	background: #383838;
 	color: #FFFFFF;
 	font-family: "Nunito", sans-serif;
@@ -186,7 +210,7 @@ body {
 }
 
 .fontsize_secondary a, .fontsize_secondary, .hypeTemplate_horizontal a, .hypeTemplate_horizontal:hover a {
-	font-size: 1.8rem;
+	.font-tint-secondary
 }
 
 .font_secondary, .font_secondary a, .hypeTemplate .post-title:not(.text-only) p {
@@ -313,6 +337,7 @@ body {
 
 
 /* Additions */
+
 body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slider_el {
 	height: 27.1rem !important;
 	overflow: hidden;
@@ -323,7 +348,7 @@ body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slide
 }
 
 .hypeTemplate_horizontal_rarr, .hypeTemplate_horizontal_larr {
-	font-size: 2rem;
+	.font-tint-hypetemp;
 	align-items: center;
 	background: #000000;
 	color: #9B9B9B;
@@ -333,7 +358,7 @@ body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slide
 	line-height: 1em;
 	margin-top: auto;
 	opacity: 1;
-    top: 0 !important;
+	top: 0 !important;
 }
 
 .hypeTemplate_horizontal_rarr:hover, .hypeTemplate_horizontal_larr:hover {
@@ -369,8 +394,8 @@ body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slide
 	height: auto !important;
 	margin: 0 0.5rem;
 	position: relative !important;
-    top: auto !important;
-    left: auto !important;
+	top: auto !important;
+	left: auto !important;
 	width: 25rem !important;
 }
 
@@ -413,8 +438,8 @@ body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slide
 	left: 0;
 	position: initial;
 	right: auto;
-    top: 0;
-    width: 100%;
+	top: 0;
+	width: 100%;
 }
 
 .network-icon a {
@@ -422,7 +447,7 @@ body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slide
 }
 
 .hypeTemplate_horizontal.text-only .network-icon a {
-	font-size: 3rem;
+	.font-tint-textonly;
 }
 
 .hypeTemplate_horizontal .post-title-padding {
@@ -437,15 +462,16 @@ body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slide
 	height: 14.1rem;
 	position: relative;
 }
+
 .text-only .post-image {
 	height: 0;
 }
 
-.post.text-only .post-type-icon a { 
-    display: flex;
+.post.text-only .post-type-icon a {
+	display: flex;
 	justify-content: center;
 	position: absolute;
-    width: 100%;
+	width: 100%;
 	z-index: 200;
 }
 
@@ -464,20 +490,22 @@ body, .theme-hypeTemplate_horizontal.slider_text_show, .slider_container, .slide
 .post-content::after {
 	background: #383838;
 	bottom: 0;
-    content: "";
-    display: block;
-    height: 1rem;
-    position: absolute;
-    width: 100%;
+	content: "";
+	display: block;
+	height: 1rem;
+	position: absolute;
+	width: 100%;
 }
 
 img.emojione {
-  height: 1.8rem;
-  min-height: 0;
-  min-width: 0;
+	height: 1.8rem;
+	min-height: 0;
+	min-width: 0;
 }
 
+
 /* Ellispsis */
+
 .hypeTemplate_horizontal .post-title {
 	height: 13.1rem;
 	overflow: hidden;
@@ -493,18 +521,18 @@ img.emojione {
 }
 
 .hypeTemplate_horizontal .post-title::after {
-	font-size: 1.8rem;
-    bottom: 1.25em;
-    box-sizing: content-box;
-    content: "\02026";  
-    float: right;
-    left: 100%;
-    line-height: 1.25em;
-    margin-left: -1em;
-    padding-right: 0.5rem;
-    position: relative;
-    text-align: center;
-    width: 1em;
+	.font-tint-secondary;
+	bottom: 1.25em;
+	box-sizing: content-box;
+	content: "\02026";
+	float: right;
+	left: 100%;
+	line-height: 1.25em;
+	margin-left: -1em;
+	padding-right: 0.5rem;
+	position: relative;
+	text-align: center;
+	width: 1em;
 }
 
 .hypeTemplate_horizontal.text-only .post-title::after {
@@ -512,11 +540,11 @@ img.emojione {
 }
 
 .hypeTemplate_horizontal .post-title > *:first-child {
-    float: right;
+	float: right;
 	height: auto !important;
 	left: 0 !important;
-    margin-left: -0.5rem;
-    margin-right: 1em;
+	margin-left: -0.5rem;
+	margin-right: 1em;
 	top: 0 !important;
 	width: ~"calc(100% - 1em)" !important;
 }
@@ -529,15 +557,15 @@ img.emojione {
 	padding: 1rem;
 }
 
- li.collections-nav, .collections-sub, .collections-search-item {
+li.collections-nav, .collections-sub, .collections-search-item {
 	background-color: #383838 !important;
-} 
+}
 
 .collection-triangle {
 	border-color: #383838 transparent transparent transparent !important;
 }
 
 .collections-sub-item {
-  color: #FFFFFF;
-  opacity: 1;
+	color: #FFFFFF;
+	opacity: 1;
 }
