@@ -125,12 +125,7 @@
 }
 .font-branding-icon {
   color: #FFFFFF;
-  font-size: 2.2rem;
-}
-@media (min-width: 512px) {
-  .font-branding-icon {
-    font-size: 1.8rem;
-  }
+  font-size: 1.8rem;
 }
 .font-icon-separator {
   color: #FFFFFF;
@@ -295,5 +290,5 @@
   font-size: 2rem;
 }
 .font-tint-textonly {
-  font-size: 8rem;
+  font-size: 4rem;
 }
